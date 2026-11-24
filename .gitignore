@@ -1,0 +1,30 @@
+# Byte-compiled / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# C++ / CMake / pybind11 build artifacts
+build/
+cpp/build/
+*.so
+*.dylib
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+
+# Packaging & virtual environments
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# Local scratch & benchmark caches
+proposals/
+tests/.pgft_audit_cache.json
+*.pkl
+*.log

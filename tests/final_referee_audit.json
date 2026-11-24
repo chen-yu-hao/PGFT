@@ -1,0 +1,2896 @@
+{
+  "package_path": "/home/antigravity/project/src/pgft",
+  "gate1_and_gate2_ast_complexity": {
+    "files_audited": [
+      "__init__.py",
+      "dynamic_acfd.py",
+      "isdf_thc.py",
+      "solver.py",
+      "static_scf.py"
+    ],
+    "dft_violations": [],
+    "nelec1_cheat_violations": [],
+    "eri_or_ao2mo_violations": [],
+    "einsum_calls": [],
+    "ast_matrix_op_counts_per_file": {
+      "__init__.py": 0,
+      "dynamic_acfd.py": 61,
+      "isdf_thc.py": 12,
+      "solver.py": 0,
+      "static_scf.py": 86
+    },
+    "ast_matrix_ops_detail": {
+      "__init__.py": [],
+      "dynamic_acfd.py": [
+        {
+          "line": 59,
+          "op": "np.linalg.lstsq",
+          "expr": "np.linalg.lstsq(A, T, rcond=1e-12)"
+        },
+        {
+          "line": 125,
+          "op": "qr",
+          "expr": "qr(X_occ, pivoting=True, mode='economic')"
+        },
+        {
+          "line": 127,
+          "op": "np.linalg.svd",
+          "expr": "np.linalg.svd(P_pts, full_matrices=False)"
+        },
+        {
+          "line": 128,
+          "op": "MatMult(@)",
+          "expr": "u_s @ vt_s"
+        },
+        {
+          "line": 129,
+          "op": "MatMult(@)",
+          "expr": "U_loc.T @ X_occ"
+        },
+        {
+          "line": 130,
+          "op": "MatMult(@)",
+          "expr": "(U_loc * U_loc).T @ ntot[occ_idx]"
+        },
+        {
+          "line": 133,
+          "op": "MatMult(@)",
+          "expr": "Q_occ @ Q_occ.T"
+        },
+        {
+          "line": 147,
+          "op": "MatMult(@)",
+          "expr": "Om.T @ W_conn_occ @ Om"
+        },
+        {
+          "line": 154,
+          "op": "MatMult(@)",
+          "expr": "X_ao.T @ X_ao"
+        },
+        {
+          "line": 156,
+          "op": "MatMult(@)",
+          "expr": "AtA_ao @ Z.T"
+        },
+        {
+          "line": 159,
+          "op": "MatMult(@)",
+          "expr": "Z_s.T @ Z_s"
+        },
+        {
+          "line": 189,
+          "op": "MatMult(@)",
+          "expr": "C.T @ thc.X_ao"
+        },
+        {
+          "line": 195,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ (M_thc @ (Q_mo.T @ ntot))"
+        },
+        {
+          "line": 240,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ Q_mo.T"
+        },
+        {
+          "line": 253,
+          "op": "np.outer",
+          "expr": "np.outer(rho_tot, rho_tot)"
+        },
+        {
+          "line": 301,
+          "op": "np.tensordot",
+          "expr": "np.tensordot(cos_mat, Pi_tau, axes=(1, 0))"
+        },
+        {
+          "line": 377,
+          "op": "MatMult(@)",
+          "expr": "C.T @ thc.X_ao"
+        },
+        {
+          "line": 379,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ Q_mo.T"
+        },
+        {
+          "line": 83,
+          "op": "MatMult(@)",
+          "expr": "W_sub @ W_sub"
+        },
+        {
+          "line": 141,
+          "op": "MatMult(@)",
+          "expr": "W_m @ W_m"
+        },
+        {
+          "line": 147,
+          "op": "MatMult(@)",
+          "expr": "Om.T @ W_conn_occ"
+        },
+        {
+          "line": 158,
+          "op": "np.linalg.solve",
+          "expr": "np.linalg.solve(AtA_ao + np.diag(ridge), AtB)"
+        },
+        {
+          "line": 195,
+          "op": "MatMult(@)",
+          "expr": "M_thc @ (Q_mo.T @ ntot)"
+        },
+        {
+          "line": 203,
+          "op": "MatMult(@)",
+          "expr": "Xa.T * f_vec[act][None, :] @ Xa"
+        },
+        {
+          "line": 264,
+          "op": "MatMult(@)",
+          "expr": "X_mo.T @ X_mo"
+        },
+        {
+          "line": 307,
+          "op": "MatMult(@)",
+          "expr": "Z @ Pi_iw[iw]"
+        },
+        {
+          "line": 308,
+          "op": "MatMult(@)",
+          "expr": "ZPi @ Z.T"
+        },
+        {
+          "line": 310,
+          "op": "np.linalg.eigh",
+          "expr": "np.linalg.eigh(Pi_pq)"
+        },
+        {
+          "line": 312,
+          "op": "MatMult(@)",
+          "expr": "ZPi.T @ U"
+        },
+        {
+          "line": 386,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ (M_thc @ (Q_mo.T @ ntot))"
+        },
+        {
+          "line": 102,
+          "op": "np.dot",
+          "expr": "np.dot(wp, s_ent)"
+        },
+        {
+          "line": 190,
+          "op": "MatMult(@)",
+          "expr": "C.T @ h1_ao"
+        },
+        {
+          "line": 195,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ ntot"
+        },
+        {
+          "line": 380,
+          "op": "MatMult(@)",
+          "expr": "C.T @ h1_ao"
+        },
+        {
+          "line": 386,
+          "op": "MatMult(@)",
+          "expr": "M_thc @ (Q_mo.T @ ntot)"
+        },
+        {
+          "line": 393,
+          "op": "MatMult(@)",
+          "expr": "Xa.T * f_vec[act][None, :] @ Xa"
+        },
+        {
+          "line": 78,
+          "op": "np.outer",
+          "expr": "np.outer(diag_O, diag_O)"
+        },
+        {
+          "line": 135,
+          "op": "np.outer",
+          "expr": "np.outer(d_o, d_o)"
+        },
+        {
+          "line": 207,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ W_KL"
+        },
+        {
+          "line": 293,
+          "op": "MatMult(@)",
+          "expr": "X_mo.T * (n_s * ex)[None, :] @ X_mo"
+        },
+        {
+          "line": 294,
+          "op": "MatMult(@)",
+          "expr": "X_mo.T * ((1.0 - n_s) * ex)[None, :] @ X_mo"
+        },
+        {
+          "line": 295,
+          "op": "MatMult(@)",
+          "expr": "X_mo.T * (kb_s * ex)[None, :] @ X_mo"
+        },
+        {
+          "line": 314,
+          "op": "MatMult(@)",
+          "expr": "Wf_pos @ V"
+        },
+        {
+          "line": 386,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ ntot"
+        },
+        {
+          "line": 101,
+          "op": "np.dot",
+          "expr": "np.dot(wp, s_ent)"
+        },
+        {
+          "line": 104,
+          "op": "np.dot",
+          "expr": "np.dot(wp * s_ent, eps_s)"
+        },
+        {
+          "line": 315,
+          "op": "MatMult(@)",
+          "expr": "W_pos @ V"
+        },
+        {
+          "line": 394,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_KL)"
+        },
+        {
+          "line": 408,
+          "op": "MatMult(@)",
+          "expr": "Xa.T * ua[None, :] @ Xa"
+        },
+        {
+          "line": 414,
+          "op": "MatMult(@)",
+          "expr": "Xb.T * ub[None, :] @ Xb"
+        },
+        {
+          "line": 342,
+          "op": "MatMult(@)",
+          "expr": "Wc_mod @ V"
+        },
+        {
+          "line": 416,
+          "op": "np.dot",
+          "expr": "np.dot(ua, Kd_a)"
+        },
+        {
+          "line": 335,
+          "op": "MatMult(@)",
+          "expr": "Wc_mod @ V"
+        },
+        {
+          "line": 343,
+          "op": "MatMult(@)",
+          "expr": "W_coul @ V"
+        },
+        {
+          "line": 409,
+          "op": "MatMult(@)",
+          "expr": "Xa @ (M_thc * D_KL)"
+        },
+        {
+          "line": 415,
+          "op": "MatMult(@)",
+          "expr": "Xa @ (M_thc * D_b)"
+        },
+        {
+          "line": 420,
+          "op": "np.dot",
+          "expr": "np.dot(ntot, h_diag)"
+        },
+        {
+          "line": 421,
+          "op": "np.dot",
+          "expr": "np.dot(ntot, J_diag)"
+        },
+        {
+          "line": 422,
+          "op": "np.dot",
+          "expr": "np.dot(na_v, Ka_d)"
+        },
+        {
+          "line": 422,
+          "op": "np.dot",
+          "expr": "np.dot(nb_v, Kb_d)"
+        },
+        {
+          "line": 336,
+          "op": "MatMult(@)",
+          "expr": "W_coul @ V"
+        }
+      ],
+      "isdf_thc.py": [
+        {
+          "line": 260,
+          "op": "MatMult(@)",
+          "expr": "X_ao.T @ X_ao"
+        },
+        {
+          "line": 279,
+          "op": "MatMult(@)",
+          "expr": "A_sig.T @ B_sig.T"
+        },
+        {
+          "line": 284,
+          "op": "np.linalg.solve",
+          "expr": "np.linalg.solve(AtA_norm, AtB / d_scale[:, None])"
+        },
+        {
+          "line": 287,
+          "op": "MatMult(@)",
+          "expr": "Z.T @ Z"
+        },
+        {
+          "line": 116,
+          "op": "MatMult(@)",
+          "expr": "d.T * w[None, :] @ d"
+        },
+        {
+          "line": 122,
+          "op": "np.linalg.eigh",
+          "expr": "np.linalg.eigh(I_loc)"
+        },
+        {
+          "line": 127,
+          "op": "MatMult(@)",
+          "expr": "Q.T @ u_vec"
+        },
+        {
+          "line": 162,
+          "op": "MatMult(@)",
+          "expr": "sphere @ frames[ia].T"
+        },
+        {
+          "line": 231,
+          "op": "MatMult(@)",
+          "expr": "Phi_act.T @ phi_p"
+        },
+        {
+          "line": 283,
+          "op": "np.outer",
+          "expr": "np.outer(d_scale, d_scale)"
+        },
+        {
+          "line": 235,
+          "op": "MatMult(@)",
+          "expr": "lp @ L_act[:k, :]"
+        },
+        {
+          "line": 134,
+          "op": "MatMult(@)",
+          "expr": "Q.T @ u_vec"
+        }
+      ],
+      "solver.py": [],
+      "static_scf.py": [
+        {
+          "line": 108,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ exc_plus"
+        },
+        {
+          "line": 109,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ exc_minus"
+        },
+        {
+          "line": 110,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ rho_p"
+        },
+        {
+          "line": 111,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ rho_m"
+        },
+        {
+          "line": 155,
+          "op": "MatMult(@)",
+          "expr": "stat.C_no.T @ thc.X_ao"
+        },
+        {
+          "line": 202,
+          "op": "MatMult(@)",
+          "expr": "Q_act @ Q_act.T"
+        },
+        {
+          "line": 214,
+          "op": "MatMult(@)",
+          "expr": "Q_act @ M_thc"
+        },
+        {
+          "line": 270,
+          "op": "np.linalg.eigh",
+          "expr": "np.linalg.eigh(1j * K)"
+        },
+        {
+          "line": 285,
+          "op": "MatMult(@)",
+          "expr": "V.conj().T @ M @ V"
+        },
+        {
+          "line": 298,
+          "op": "MatMult(@)",
+          "expr": "X_a.T * f_a[None, :] @ X_a"
+        },
+        {
+          "line": 300,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ W_KL @ X_mo.T"
+        },
+        {
+          "line": 408,
+          "op": "MatMult(@)",
+          "expr": "C0.T @ h1_ao @ C0"
+        },
+        {
+          "line": 409,
+          "op": "MatMult(@)",
+          "expr": "C0.T @ thc.X_ao"
+        },
+        {
+          "line": 641,
+          "op": "MatMult(@)",
+          "expr": "C_opt.T @ thc.X_ao"
+        },
+        {
+          "line": 642,
+          "op": "MatMult(@)",
+          "expr": "C_opt.T @ h1_ao @ C_opt"
+        },
+        {
+          "line": 643,
+          "op": "MatMult(@)",
+          "expr": "(X_mo * X_mo).T @ ntot"
+        },
+        {
+          "line": 644,
+          "op": "MatMult(@)",
+          "expr": "M_thc @ d_K"
+        },
+        {
+          "line": 645,
+          "op": "MatMult(@)",
+          "expr": "X_mo * v_K[None, :] @ X_mo.T"
+        },
+        {
+          "line": 127,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ v_Op"
+        },
+        {
+          "line": 128,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ v_Om"
+        },
+        {
+          "line": 208,
+          "op": "MatMult(@)",
+          "expr": "W_s @ W_s"
+        },
+        {
+          "line": 272,
+          "op": "MatMult(@)",
+          "expr": "V * ew[None, :] @ V.conj().T"
+        },
+        {
+          "line": 285,
+          "op": "MatMult(@)",
+          "expr": "V.conj().T @ M"
+        },
+        {
+          "line": 286,
+          "op": "MatMult(@)",
+          "expr": "V @ (-1j * D * VMV) @ V.conj().T"
+        },
+        {
+          "line": 300,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ W_KL"
+        },
+        {
+          "line": 324,
+          "op": "qr",
+          "expr": "qr(X_sub, pivoting=True, mode='economic')"
+        },
+        {
+          "line": 326,
+          "op": "np.linalg.svd",
+          "expr": "np.linalg.svd(P_pts, full_matrices=False)"
+        },
+        {
+          "line": 327,
+          "op": "MatMult(@)",
+          "expr": "sv_u @ sv_vt"
+        },
+        {
+          "line": 336,
+          "op": "MatMult(@)",
+          "expr": "U_seed.T @ h0 @ U_seed"
+        },
+        {
+          "line": 408,
+          "op": "MatMult(@)",
+          "expr": "C0.T @ h1_ao"
+        },
+        {
+          "line": 417,
+          "op": "MatMult(@)",
+          "expr": "C_base.T @ h1_ao @ C_base"
+        },
+        {
+          "line": 418,
+          "op": "MatMult(@)",
+          "expr": "C_base.T @ thc.X_ao"
+        },
+        {
+          "line": 592,
+          "op": "np.linalg.eigh",
+          "expr": "np.linalg.eigh(0.5 * (h0 + h0.T))"
+        },
+        {
+          "line": 642,
+          "op": "MatMult(@)",
+          "expr": "C_opt.T @ h1_ao"
+        },
+        {
+          "line": 191,
+          "op": "qr",
+          "expr": "qr(X_sub, pivoting=True, mode='economic')"
+        },
+        {
+          "line": 193,
+          "op": "np.linalg.svd",
+          "expr": "np.linalg.svd(P_pts, full_matrices=False)"
+        },
+        {
+          "line": 194,
+          "op": "MatMult(@)",
+          "expr": "u_s @ vt_s"
+        },
+        {
+          "line": 195,
+          "op": "MatMult(@)",
+          "expr": "U_loc.T @ X_sub"
+        },
+        {
+          "line": 197,
+          "op": "MatMult(@)",
+          "expr": "U2.T @ wa_act[i0:i1]"
+        },
+        {
+          "line": 198,
+          "op": "MatMult(@)",
+          "expr": "U2.T @ nu_act[i0:i1]"
+        },
+        {
+          "line": 235,
+          "op": "MatMult(@)",
+          "expr": "M_thc @ d2"
+        },
+        {
+          "line": 286,
+          "op": "MatMult(@)",
+          "expr": "V @ (-1j * D * VMV)"
+        },
+        {
+          "line": 328,
+          "op": "MatMult(@)",
+          "expr": "U_loc.T @ h0[sub, sub] @ U_loc"
+        },
+        {
+          "line": 336,
+          "op": "MatMult(@)",
+          "expr": "U_seed.T @ h0"
+        },
+        {
+          "line": 417,
+          "op": "MatMult(@)",
+          "expr": "C_base.T @ h1_ao"
+        },
+        {
+          "line": 425,
+          "op": "MatMult(@)",
+          "expr": "U.T @ h_base @ U"
+        },
+        {
+          "line": 426,
+          "op": "MatMult(@)",
+          "expr": "U.T @ X_base"
+        },
+        {
+          "line": 449,
+          "op": "MatMult(@)",
+          "expr": "Q_mo.T @ ntot"
+        },
+        {
+          "line": 450,
+          "op": "MatMult(@)",
+          "expr": "M_thc @ d_K"
+        },
+        {
+          "line": 451,
+          "op": "MatMult(@)",
+          "expr": "X_mo * v_K[None, :] @ X_mo.T"
+        },
+        {
+          "line": 623,
+          "op": "MatMult(@)",
+          "expr": "C_base @ U_opt"
+        },
+        {
+          "line": 664,
+          "op": "np.linalg.eigh",
+          "expr": "np.linalg.eigh(0.5 * (F_semi[sub, sub] + F_semi[sub, sub].T))"
+        },
+        {
+          "line": 665,
+          "op": "MatMult(@)",
+          "expr": "C_opt[:, sub] @ V_sub"
+        },
+        {
+          "line": 129,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ q_vOm"
+        },
+        {
+          "line": 204,
+          "op": "np.outer",
+          "expr": "np.outer(d_o, d_o)"
+        },
+        {
+          "line": 238,
+          "op": "np.dot",
+          "expr": "np.dot(d1_Mq, d2)"
+        },
+        {
+          "line": 328,
+          "op": "MatMult(@)",
+          "expr": "U_loc.T @ h0[sub, sub]"
+        },
+        {
+          "line": 425,
+          "op": "MatMult(@)",
+          "expr": "U.T @ h_base"
+        },
+        {
+          "line": 512,
+          "op": "np.dot",
+          "expr": "np.dot(ntot, np.diag(h_mo))"
+        },
+        {
+          "line": 589,
+          "op": "MatMult(@)",
+          "expr": "C0 @ U_loc"
+        },
+        {
+          "line": 601,
+          "op": "MatMult(@)",
+          "expr": "C0 @ U_hc"
+        },
+        {
+          "line": 129,
+          "op": "MatMult(@)",
+          "expr": "Q_mo @ q_vOp"
+        },
+        {
+          "line": 237,
+          "op": "np.dot",
+          "expr": "np.dot(d1_Mq, d1)"
+        },
+        {
+          "line": 239,
+          "op": "np.dot",
+          "expr": "np.dot(d2, Md2)"
+        },
+        {
+          "line": 353,
+          "op": "MatMult(@)",
+          "expr": "U_seed.T @ h0 @ U_seed"
+        },
+        {
+          "line": 513,
+          "op": "np.dot",
+          "expr": "np.dot(ntot, np.diag(J_mo))"
+        },
+        {
+          "line": 523,
+          "op": "MatMult(@)",
+          "expr": "U @ A"
+        },
+        {
+          "line": 353,
+          "op": "MatMult(@)",
+          "expr": "U_seed.T @ h0"
+        },
+        {
+          "line": 473,
+          "op": "MatMult(@)",
+          "expr": "Xa.T * ua[None, :] @ Xa"
+        },
+        {
+          "line": 474,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_KL) @ Xa.T"
+        },
+        {
+          "line": 485,
+          "op": "MatMult(@)",
+          "expr": "Xb.T * ub[None, :] @ Xb"
+        },
+        {
+          "line": 486,
+          "op": "MatMult(@)",
+          "expr": "Xa.T * ua[None, :] @ Xa"
+        },
+        {
+          "line": 487,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_b) @ Xa.T"
+        },
+        {
+          "line": 488,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_a) @ Xb.T"
+        },
+        {
+          "line": 514,
+          "op": "np.dot",
+          "expr": "np.dot(na, np.diag(Ka))"
+        },
+        {
+          "line": 514,
+          "op": "np.dot",
+          "expr": "np.dot(nb, np.diag(Kb))"
+        },
+        {
+          "line": 474,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_KL)"
+        },
+        {
+          "line": 487,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_b)"
+        },
+        {
+          "line": 488,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (M_thc * D_a)"
+        },
+        {
+          "line": 500,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (X_mo * dE_dQ).T"
+        },
+        {
+          "line": 504,
+          "op": "MatMult(@)",
+          "expr": "X_mo @ (X_mo * (dE_dQa + dE_dQb)).T"
+        },
+        {
+          "line": 476,
+          "op": "np.dot",
+          "expr": "np.dot(ua, Kd_act)"
+        },
+        {
+          "line": 491,
+          "op": "np.dot",
+          "expr": "np.dot(ua, Kd_a)"
+        },
+        {
+          "line": 527,
+          "op": "np.dot",
+          "expr": "np.dot(wa_t, dE_dn)"
+        },
+        {
+          "line": 532,
+          "op": "np.dot",
+          "expr": "np.dot(wa_t, dE_dna)"
+        },
+        {
+          "line": 533,
+          "op": "np.dot",
+          "expr": "np.dot(wb_t, dE_dnb)"
+        }
+      ]
+    },
+    "max_O_N_scaling_indices_in_any_contraction": 3,
+    "verified_contraction_catalog": [
+      {
+        "file": "isdf_thc.py",
+        "op": "(d.T * w) @ d",
+        "indices": [
+          "natm",
+          "3",
+          "3"
+        ],
+        "n_scaling_indices": 1
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "sphere @ frames[ia].T",
+        "indices": [
+          "170",
+          "3",
+          "3"
+        ],
+        "n_scaling_indices": 0
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "Phi_act.T @ phi_p (in k=1..N_K loop)",
+        "indices": [
+          "N_K",
+          "N_g",
+          "N_AO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "lp @ L_act[:k, :] (in k=1..N_K loop)",
+        "indices": [
+          "N_K",
+          "N_K",
+          "N_g"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "X_ao.T @ X_ao",
+        "indices": [
+          "N_K",
+          "N_AO",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "A_sig.T @ B_sig.T",
+        "indices": [
+          "N_K",
+          "N_sig",
+          "N_aux"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "np.linalg.solve(AtA_norm, AtB)",
+        "indices": [
+          "N_K",
+          "N_K",
+          "N_aux"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "isdf_thc.py",
+        "op": "Z.T @ Z",
+        "indices": [
+          "N_K",
+          "N_aux",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "C.T @ h1_ao @ C",
+        "indices": [
+          "N_MO",
+          "N_AO",
+          "N_AO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "C.T @ thc.X_ao",
+        "indices": [
+          "N_MO",
+          "N_AO",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "eigh(1j * Krot) & expm",
+        "indices": [
+          "N_MO",
+          "N_MO",
+          "N_MO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "U.T @ X_base",
+        "indices": [
+          "N_MO",
+          "N_MO",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "(X_mo * v_K) @ X_mo.T (J_mo)",
+        "indices": [
+          "N_MO",
+          "N_K",
+          "N_MO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "(X_a.T * f_a) @ X_a (D_KL)",
+        "indices": [
+          "N_K",
+          "N_act",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "(X_mo @ W_KL) @ X_mo.T (K_mo, x N_quad=28)",
+        "indices": [
+          "N_MO",
+          "N_K",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "static_scf.py",
+        "op": "_skew_frechet_triu V^H @ M @ V",
+        "indices": [
+          "N_MO",
+          "N_MO",
+          "N_MO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "C.T @ thc.X_ao",
+        "indices": [
+          "N_MO",
+          "N_AO",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "Q_mo @ Q_mo.T (O_ovlp)",
+        "indices": [
+          "N_MO",
+          "N_K",
+          "N_MO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "W_sub = W_sub @ W_sub (x4)",
+        "indices": [
+          "N_MO",
+          "N_MO",
+          "N_MO"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "(X_mo.T @ X_mo)**2 (W_pos)",
+        "indices": [
+          "N_K",
+          "N_MO",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "(X_mo.T * w) @ X_mo (Gh,Gp,Fa x N_tau=38)",
+        "indices": [
+          "N_K",
+          "N_MO",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "tensordot(cos_mat, Pi_tau)",
+        "indices": [
+          "N_omega(1)",
+          "N_tau(1)",
+          "N_K",
+          "N_K"
+        ],
+        "n_scaling_indices": 2
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "Z @ Pi_iw[iw] & ZPi @ Z.T (x N_omega=28)",
+        "indices": [
+          "N_aux",
+          "N_K",
+          "N_K"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "eigh(Pi_pq) (x N_omega=28)",
+        "indices": [
+          "N_aux",
+          "N_aux",
+          "N_aux"
+        ],
+        "n_scaling_indices": 3
+      },
+      {
+        "file": "dynamic_acfd.py",
+        "op": "ZPi.T @ U & (Wf_pos @ V) * V",
+        "indices": [
+          "N_K",
+          "N_K",
+          "N_aux"
+        ],
+        "n_scaling_indices": 3
+      }
+    ],
+    "gate1_ast_pass": true,
+    "gate2_ast_pass": true
+  },
+  "gate2_empirical_scaling_H2k": {
+    "H2k_sto3g_records": [
+      {
+        "k_units": 2,
+        "n_atoms": 4,
+        "nao": 4,
+        "n_aux": 72,
+        "n_thc": 10,
+        "n_tril_pairs": 10,
+        "n_sig_pairs": 10,
+        "sig_fraction": 1.0,
+        "time_thc_s": 0.0504,
+        "time_stat_s": 0.016,
+        "time_dyn_s": 0.0129,
+        "time_tot_s": 0.0793,
+        "e_tot_per_H2_ha": -1.10746685
+      },
+      {
+        "k_units": 4,
+        "n_atoms": 8,
+        "nao": 8,
+        "n_aux": 144,
+        "n_thc": 33,
+        "n_tril_pairs": 36,
+        "n_sig_pairs": 36,
+        "sig_fraction": 1.0,
+        "time_thc_s": 0.1205,
+        "time_stat_s": 0.039,
+        "time_dyn_s": 0.0471,
+        "time_tot_s": 0.2066,
+        "e_tot_per_H2_ha": -1.09652543
+      },
+      {
+        "k_units": 6,
+        "n_atoms": 12,
+        "nao": 12,
+        "n_aux": 216,
+        "n_thc": 57,
+        "n_tril_pairs": 78,
+        "n_sig_pairs": 72,
+        "sig_fraction": 0.9231,
+        "time_thc_s": 0.2485,
+        "time_stat_s": 0.1,
+        "time_dyn_s": 0.1158,
+        "time_tot_s": 0.4643,
+        "e_tot_per_H2_ha": -1.09288298
+      },
+      {
+        "k_units": 8,
+        "n_atoms": 16,
+        "nao": 16,
+        "n_aux": 288,
+        "n_thc": 81,
+        "n_tril_pairs": 136,
+        "n_sig_pairs": 108,
+        "sig_fraction": 0.7941,
+        "time_thc_s": 0.4978,
+        "time_stat_s": 0.2238,
+        "time_dyn_s": 0.2435,
+        "time_tot_s": 0.9651,
+        "e_tot_per_H2_ha": -1.09100922
+      },
+      {
+        "k_units": 12,
+        "n_atoms": 24,
+        "nao": 24,
+        "n_aux": 432,
+        "n_thc": 128,
+        "n_tril_pairs": 300,
+        "n_sig_pairs": 180,
+        "sig_fraction": 0.6,
+        "time_thc_s": 1.5659,
+        "time_stat_s": 0.9061,
+        "time_dyn_s": 0.7088,
+        "time_tot_s": 3.1808,
+        "e_tot_per_H2_ha": -1.08912582
+      }
+    ],
+    "fitted_exponents_k_4_to_12": {
+      "thc_build_exponent": 2.34,
+      "dynamic_acfd_exponent": 2.475,
+      "total_pgft_exponent": 2.492,
+      "schwarz_N_sig_exponent_vs_N": 1.461
+    }
+  },
+  "analytical_gradient_and_so3_audit": {
+    "stretched_H2O_631g_singlet_fd_check": {
+      "n_params_total": 91,
+      "n_rot_params": 78,
+      "n_occ_params": 13,
+      "grad_norm_analytical_as_coded": 11.356969264168502,
+      "grad_norm_fd": 11.356969261093418,
+      "max_abs_err_occupation_grad": 1.1710487746174891e-08,
+      "max_abs_err_orbital_grad_as_coded": 3.4306138041451106e-08,
+      "median_ratio_fd_over_ana_orbital_grad": 0.9999999986776338,
+      "max_abs_err_orbital_grad_with_2x_fix": 4.400900789566538,
+      "occupation_grad_exact_pass": true,
+      "orbital_grad_as_coded_exact_pass": true,
+      "orbital_grad_with_2x_fix_exact_pass": false
+    },
+    "stretched_H2O_sto3g_triplet_fd_check": {
+      "n_params_total": 35,
+      "n_rot_params": 21,
+      "n_occ_params": 14,
+      "grad_norm_analytical_as_coded": 5.853577959954474,
+      "grad_norm_fd": 5.8535779600801074,
+      "max_abs_err_occupation_grad": 1.5738556013999982e-08,
+      "max_abs_err_orbital_grad_as_coded": 4.382092000376758e-08,
+      "median_ratio_fd_over_ana_orbital_grad": 0.9999999729419938,
+      "max_abs_err_orbital_grad_with_2x_fix": 3.513023150154157,
+      "occupation_grad_exact_pass": true,
+      "orbital_grad_as_coded_exact_pass": true,
+      "orbital_grad_with_2x_fix_exact_pass": false
+    },
+    "so3_euler_rotation_eq_H2O_631g": {
+      "e_tot_unrotated_ha": -76.08097232761197,
+      "e_tot_rotated_ha": -76.08097232804616,
+      "diff_tot_uHa": -0.0004341842441135668,
+      "diff_stat_uHa": 1.318767317570746e-05,
+      "diff_dyn_uHa": -0.0004473659359627291
+    },
+    "so3_euler_rotation_stretched_H2O_631g": {
+      "e_tot_unrotated_ha": -75.81894699968346,
+      "e_tot_rotated_ha": -75.81841679591756,
+      "diff_tot_uHa": 530.2037659049574,
+      "diff_stat_uHa": 255.2979991179427,
+      "diff_dyn_uHa": 274.9057667908589
+    }
+  },
+  "gates_3_and_5_sie_and_size_consistency": {
+    "official_gauntlet_audit": {
+      "sie_H_atom_error_ha": 3.3306690738754696e-16,
+      "sie_H2plus_4A_error_kcal": 0.0,
+      "size_consistency_A_ha": -5.3193373261706256e-08,
+      "size_consistency_B_ha": -2.152981879444127e-07,
+      "size_consistency_C_ha": 3.6256693514147287e-07
+    },
+    "one_electron_H_ccpvdz": {
+      "e_tot": -0.49927840341958296,
+      "e_dyn": -3.393343218625354e-20,
+      "Exact_FCI": -0.4992784034195833,
+      "error_uHa": 3.3306690738754696e-10
+    },
+    "one_electron_H2plus_ccpvdz": [
+      {
+        "e_tot": -0.5514322144837325,
+        "e_stat": -0.5514322144837325,
+        "e_dyn": -3.236792323905268e-19,
+        "e_hf": -0.5514322144837328,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.9999999999999998,
+        "max_abs_Pa_minus_Pb": 0.25305407925509066,
+        "time_s": 0.0319,
+        "R_angstrom": 0.7,
+        "Exact_FCI": -0.5514322144837328,
+        "error_kcal_mol": 2.0900263988258284e-13
+      },
+      {
+        "e_tot": -0.6002572844066538,
+        "e_stat": -0.6002572844066538,
+        "e_dyn": -3.8168672797315283e-19,
+        "e_hf": -0.6002572844066534,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.9999999999999998,
+        "max_abs_Pa_minus_Pb": 0.23061689752468567,
+        "time_s": 0.0327,
+        "R_angstrom": 1.06,
+        "Exact_FCI": -0.6002572844066543,
+        "error_kcal_mol": 2.7867018651011045e-13
+      },
+      {
+        "e_tot": -0.5018645964342241,
+        "e_stat": -0.5018645964342241,
+        "e_dyn": -2.5490044681069956e-19,
+        "e_hf": -0.5018645964342243,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.9999999999999998,
+        "max_abs_Pa_minus_Pb": 0.16794006633433103,
+        "time_s": 0.0527,
+        "R_angstrom": 4.0,
+        "Exact_FCI": -0.5018645964342241,
+        "error_kcal_mol": 0.0
+      },
+      {
+        "e_tot": -0.49935395688650597,
+        "e_stat": -0.49935395688650597,
+        "e_dyn": -9.244526478649003e-19,
+        "e_hf": -0.49935395688650597,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.9999999999999998,
+        "max_abs_Pa_minus_Pb": 0.17249238254941973,
+        "time_s": 0.0274,
+        "R_angstrom": 6.0,
+        "Exact_FCI": -0.4993539568865061,
+        "error_kcal_mol": 6.966754662752761e-14
+      }
+    ],
+    "anti_cheat_3e_H2plus_He_100A": {
+      "additivity_error_uHa": -0.14124208780330605,
+      "error_vs_fci_kcal_mol": 4.219172206254784
+    },
+    "anti_cheat_3e_stretched_H2_plus_H_100A": {
+      "additivity_error_uHa": 220.93857742322422,
+      "error_vs_fci_kcal_mol": 0.5557576849957978
+    },
+    "two_electron_atoms_ccpvdz": {
+      "H_minus": {
+        "e_tot": -0.4647364704502629,
+        "e_stat": -0.44883833803517514,
+        "e_dyn": -0.015898132415087744,
+        "e_hf": -0.44882372599763665,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.0,
+        "max_abs_Pa_minus_Pb": 0.0,
+        "time_s": 0.0138,
+        "Exact_FCI": -0.4698567766923625,
+        "RHF": -0.44882372599763665,
+        "error_mHa": 5.1203062420995815
+      },
+      "He": {
+        "e_tot": -2.880871011073823,
+        "e_stat": -2.8551608655586294,
+        "e_dyn": -0.025710145515193607,
+        "e_hf": -2.8551604772427406,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.0,
+        "max_abs_Pa_minus_Pb": 0.0,
+        "time_s": 0.0158,
+        "Exact_FCI": -2.8875948310909365,
+        "RHF": -2.8551604772427406,
+        "error_mHa": 6.723820017113358
+      },
+      "Li_plus": {
+        "e_tot": -7.236234269394478,
+        "e_stat": -7.236118676165928,
+        "e_dyn": -0.00011559322855014936,
+        "e_hf": -7.236118642286902,
+        "occ_alpha_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "occ_beta_top6": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_abs_na_minus_nb": 0.0,
+        "max_abs_Pa_minus_Pb": 0.0,
+        "time_s": 0.1021,
+        "Exact_FCI": -7.236223745850536,
+        "RHF": -7.236118642286902,
+        "error_mHa": -0.01052354394204258
+      }
+    },
+    "He2_vdw_ccpvdz": [
+      {
+        "R_angstrom": 2.6,
+        "PGFT_interaction_uHa": 47.71,
+        "Exact_FCI_interaction_uHa": 59.84,
+        "RHF_interaction_uHa": 74.55
+      },
+      {
+        "R_angstrom": 3.0,
+        "PGFT_interaction_uHa": -7.0,
+        "Exact_FCI_interaction_uHa": -5.62,
+        "RHF_interaction_uHa": 0.87
+      },
+      {
+        "R_angstrom": 3.5,
+        "PGFT_interaction_uHa": -3.08,
+        "Exact_FCI_interaction_uHa": -3.1,
+        "RHF_interaction_uHa": -0.68
+      },
+      {
+        "R_angstrom": 5.0,
+        "PGFT_interaction_uHa": -0.33,
+        "Exact_FCI_interaction_uHa": -0.28,
+        "RHF_interaction_uHa": -0.0
+      },
+      {
+        "R_angstrom": 100.0,
+        "PGFT_interaction_uHa": -0.05,
+        "Exact_FCI_interaction_uHa": 0.0,
+        "RHF_interaction_uHa": 0.0
+      }
+    ],
+    "heterogeneous_mu_size_consistency_631g": {
+      "Test_E1_H2_3p2A_plus_LiH_eq_100A_mHa": -1.2594354970136834,
+      "Test_E2_H2_3p2A_plus_HF_3p6A_100A_mHa": 4.571586387527304
+    },
+    "Test_D1_noninteracting_H2k_sto3g": [
+      {
+        "k_units": 1,
+        "e_per_unit_ha": -0.978589953239522,
+        "extensivity_dev_mHa": 0.0,
+        "max_abs_na_minus_nb": 0.0
+      },
+      {
+        "k_units": 2,
+        "e_per_unit_ha": -0.9785899754287389,
+        "extensivity_dev_mHa": -2.2189216908330422e-05,
+        "max_abs_na_minus_nb": 0.0
+      },
+      {
+        "k_units": 3,
+        "e_per_unit_ha": -0.9785899968722799,
+        "extensivity_dev_mHa": -4.363275785124188e-05,
+        "max_abs_na_minus_nb": 0.0
+      },
+      {
+        "k_units": 4,
+        "e_per_unit_ha": -0.9779341608179599,
+        "extensivity_dev_mHa": 0.6557924215621069,
+        "max_abs_na_minus_nb": 0.0
+      },
+      {
+        "k_units": 5,
+        "e_per_unit_ha": -0.9784802696119715,
+        "extensivity_dev_mHa": 0.10968362755048311,
+        "max_abs_na_minus_nb": 0.0
+      }
+    ]
+  },
+  "gates_4_and_6_spin_purity_and_multireference": {
+    "singlet_spin_symmetry_max_na_minus_nb": 0.0,
+    "H2_ccpvdz": {
+      "points": [
+        {
+          "R_angstrom": 0.5,
+          "PGFT_e_tot": -1.0726437606538533,
+          "PGFT_e_stat": -1.0488030700323525,
+          "PGFT_e_dyn": -0.023840690621500765,
+          "RHF": -1.0488005562126925,
+          "R_CCSD_T": -1.0793700511424926,
+          "Exact_FCI": -1.0793700508785322,
+          "error_vs_ref_kcal_mol": 4.220810841284068,
+          "occ_alpha_top6": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 0.74,
+          "PGFT_e_tot": -1.1549084930990228,
+          "PGFT_e_stat": -1.1287010331349647,
+          "PGFT_e_dyn": -0.026207459964058107,
+          "RHF": -1.1287000935564429,
+          "R_CCSD_T": -1.1633744912890605,
+          "Exact_FCI": -1.1633744903192433,
+          "error_vs_ref_kcal_mol": 5.3124934630802745,
+          "occ_alpha_top6": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.0,
+          "PGFT_e_tot": -1.1286206527906435,
+          "PGFT_e_stat": -1.100154720896895,
+          "PGFT_e_dyn": -0.0284659318937485,
+          "RHF": -1.1001537648784114,
+          "R_CCSD_T": -1.1400734812839055,
+          "Exact_FCI": -1.14007348087604,
+          "error_vs_ref_kcal_mol": 7.186758128402254,
+          "occ_alpha_top6": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.4,
+          "PGFT_e_tot": -1.0576962502988152,
+          "PGFT_e_stat": -1.0206384006866642,
+          "PGFT_e_dyn": -0.03705784961215092,
+          "RHF": -1.0211968374074567,
+          "R_CCSD_T": -1.0752705380523615,
+          "Exact_FCI": -1.0752705377420986,
+          "error_vs_ref_kcal_mol": 11.028031870568494,
+          "occ_alpha_top6": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.8,
+          "PGFT_e_tot": -1.012213599004468,
+          "PGFT_e_stat": -1.0061415849697242,
+          "PGFT_e_dyn": -0.006072014034743962,
+          "RHF": -0.9509393584651212,
+          "R_CCSD_T": -1.0304388200222478,
+          "Exact_FCI": -1.030438819071542,
+          "error_vs_ref_kcal_mol": 11.436498258973756,
+          "occ_alpha_top6": [
+            0.73453,
+            0.26547,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.4,
+          "PGFT_e_tot": -0.9960674808331826,
+          "PGFT_e_stat": -0.9954594696756611,
+          "PGFT_e_dyn": -0.0006080111575215187,
+          "RHF": -0.8750312001701339,
+          "R_CCSD_T": -1.0047070625891896,
+          "Exact_FCI": -1.004707059644878,
+          "error_vs_ref_kcal_mol": 5.421417556253623,
+          "occ_alpha_top6": [
+            0.557275,
+            0.442725,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 3.2,
+          "PGFT_e_tot": -0.998427977528175,
+          "PGFT_e_stat": -0.9982321590797564,
+          "PGFT_e_dyn": -0.0001958184484186424,
+          "RHF": -0.8146129587915402,
+          "R_CCSD_T": -0.9990926927335612,
+          "Exact_FCI": -0.9990926951965405,
+          "error_vs_ref_kcal_mol": 0.4171166344764919,
+          "occ_alpha_top6": [
+            0.500001,
+            0.499999,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 4.5,
+          "PGFT_e_tot": -0.9986782359586601,
+          "PGFT_e_stat": -0.9985539258375018,
+          "PGFT_e_dyn": -0.00012431012115837127,
+          "RHF": -0.7702462424217585,
+          "R_CCSD_T": -0.9985690977752836,
+          "Exact_FCI": -0.9985690947312195,
+          "error_vs_ref_kcal_mol": -0.06848715422988766,
+          "occ_alpha_top6": [
+            0.5,
+            0.5,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        }
+      ],
+      "NPE_vs_FCI_kcal_mol": 11.504985413203645
+    },
+    "H4_circle_631g": {
+      "points": [
+        {
+          "theta_deg": 70.0,
+          "PGFT_e_tot": -2.0026337472637468,
+          "PGFT_e_stat": -1.998464025069181,
+          "PGFT_e_dyn": -0.004169722194565591,
+          "RHF": -1.830647040812156,
+          "R_CCSD_T": -2.0281281017277846,
+          "Exact_FCI": -2.0280272880413275,
+          "error_vs_ref_kcal_mol": 15.934687417939557,
+          "occ_alpha_top6": [
+            0.713673,
+            0.689678,
+            0.309268,
+            0.287381,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 85.0,
+          "PGFT_e_tot": -1.9951542940452427,
+          "PGFT_e_stat": -1.9943367981757045,
+          "PGFT_e_dyn": -0.0008174958695382343,
+          "RHF": -1.7370327357821858,
+          "R_CCSD_T": -2.011502549269753,
+          "Exact_FCI": -2.0055000617662424,
+          "error_vs_ref_kcal_mol": 6.492067261383525,
+          "occ_alpha_top6": [
+            0.649961,
+            0.500106,
+            0.472274,
+            0.377659,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 88.0,
+          "PGFT_e_tot": -1.9948996292272756,
+          "PGFT_e_stat": -1.9940771084091888,
+          "PGFT_e_dyn": -0.0008225208180867192,
+          "RHF": -1.721144922669021,
+          "R_CCSD_T": -2.01389639830828,
+          "Exact_FCI": -2.0039739925370936,
+          "error_vs_ref_kcal_mol": 5.694248948001406,
+          "occ_alpha_top6": [
+            0.647981,
+            0.50003,
+            0.478058,
+            0.373928,
+            1e-06,
+            1e-06
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 89.5,
+          "PGFT_e_tot": -1.9947966466428335,
+          "PGFT_e_stat": -1.9939693285958224,
+          "PGFT_e_dyn": -0.0008273180470109851,
+          "RHF": -1.7134712008701,
+          "R_CCSD_T": -2.015679748837391,
+          "Exact_FCI": -2.003685333015789,
+          "error_vs_ref_kcal_mol": 5.577734911005206,
+          "occ_alpha_top6": [
+            0.648168,
+            0.492661,
+            0.486972,
+            0.372198,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 90.0,
+          "PGFT_e_tot": -1.9947887858745625,
+          "PGFT_e_stat": -1.9939614963907604,
+          "PGFT_e_dyn": -0.0008272894838022043,
+          "RHF": -1.7109498327186723,
+          "R_CCSD_T": -2.016346545834231,
+          "Exact_FCI": -2.0036658700967465,
+          "error_vs_ref_kcal_mol": 5.570454451476473,
+          "occ_alpha_top6": [
+            0.64826,
+            0.489648,
+            0.489814,
+            0.372278,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 90.5,
+          "PGFT_e_tot": -1.9947911130666192,
+          "PGFT_e_stat": -1.9939640500877513,
+          "PGFT_e_dyn": -0.0008270629788678214,
+          "RHF": -1.7134712008700992,
+          "R_CCSD_T": -2.015679748832985,
+          "Exact_FCI": -2.003685333104987,
+          "error_vs_ref_kcal_mol": 5.581207338477744,
+          "occ_alpha_top6": [
+            0.648301,
+            0.492368,
+            0.487084,
+            0.372248,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 92.0,
+          "PGFT_e_tot": -1.9950237529846437,
+          "PGFT_e_stat": -1.9941985545890477,
+          "PGFT_e_dyn": -0.0008251983955959588,
+          "RHF": -1.721144922669021,
+          "R_CCSD_T": -2.0138963983082796,
+          "Exact_FCI": -2.0039739925370923,
+          "error_vs_ref_kcal_mol": 5.61636011429575,
+          "occ_alpha_top6": [
+            0.648553,
+            0.500029,
+            0.477592,
+            0.373825,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 95.0,
+          "PGFT_e_tot": -1.99515418948858,
+          "PGFT_e_stat": -1.9943368052673816,
+          "PGFT_e_dyn": -0.0008173842211985263,
+          "RHF": -1.737032735782188,
+          "R_CCSD_T": -2.0115025492697556,
+          "Exact_FCI": -2.005500061766244,
+          "error_vs_ref_kcal_mol": 6.492132871681036,
+          "occ_alpha_top6": [
+            0.649947,
+            0.500106,
+            0.472282,
+            0.377664,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "theta_deg": 110.0,
+          "PGFT_e_tot": -2.0026340853001345,
+          "PGFT_e_stat": -1.9984639782292628,
+          "PGFT_e_dyn": -0.004170107070871801,
+          "RHF": -1.8306470408121578,
+          "R_CCSD_T": -2.028128101727787,
+          "Exact_FCI": -2.0280272880413284,
+          "error_vs_ref_kcal_mol": 15.93447529690421,
+          "occ_alpha_top6": [
+            0.713674,
+            0.689681,
+            0.309264,
+            0.287379,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        }
+      ],
+      "PGFT_cusp_mHa_at_90deg": 0.005093980163906053,
+      "Exact_FCI_cusp_mHa_at_90deg": 0.019462963641636577,
+      "RHF_cusp_mHa_at_90deg": 2.521368151427339,
+      "PGFT_barrier_90_minus_70_kcal_mol": 4.922787595372319,
+      "Exact_FCI_barrier_kcal_mol": 15.287020561835403
+    },
+    "HF_631g": {
+      "points": [
+        {
+          "R_angstrom": 0.75,
+          "PGFT_e_tot": -100.0207640649543,
+          "PGFT_e_stat": -99.93297093288045,
+          "PGFT_e_dyn": -0.08779313207385887,
+          "RHF": -99.93296496655306,
+          "R_CCSD_T": -100.05544247994891,
+          "Exact_FCI": -100.0557517399913,
+          "error_vs_ref_kcal_mol": 21.955097561150552,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 0.917,
+          "PGFT_e_tot": -100.07827852446778,
+          "PGFT_e_stat": -99.98341523442458,
+          "PGFT_e_dyn": -0.09486329004319198,
+          "RHF": -99.98340893328245,
+          "R_CCSD_T": -100.1152838303934,
+          "Exact_FCI": -100.11569791655576,
+          "error_vs_ref_kcal_mol": 23.481023048891316,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.2,
+          "PGFT_e_tot": -100.04117062554892,
+          "PGFT_e_stat": -99.93500042570614,
+          "PGFT_e_dyn": -0.10617019984278138,
+          "RHF": -99.93499448268403,
+          "R_CCSD_T": -100.08332798206045,
+          "Exact_FCI": -100.08393757028048,
+          "error_vs_ref_kcal_mol": 26.83666299579187,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.6,
+          "PGFT_e_tot": -99.96162924469077,
+          "PGFT_e_stat": -99.82597612599638,
+          "PGFT_e_dyn": -0.13565311869438568,
+          "RHF": -99.82990757847527,
+          "R_CCSD_T": -100.00905755559045,
+          "Exact_FCI": -100.00975191752153,
+          "error_vs_ref_kcal_mol": 30.197433118539305,
+          "occ_alpha_top6": [
+            1.0,
+            0.999999,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.0,
+          "PGFT_e_tot": -99.92511909821162,
+          "PGFT_e_stat": -99.85190224227355,
+          "PGFT_e_dyn": -0.07321685593807534,
+          "RHF": -99.74458552573063,
+          "R_CCSD_T": -99.96854742526354,
+          "Exact_FCI": -99.96720057189313,
+          "error_vs_ref_kcal_mol": 26.40652341768205,
+          "occ_alpha_top6": [
+            1.0,
+            0.999998,
+            0.999995,
+            0.999995,
+            0.69022,
+            0.309786
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.6,
+          "PGFT_e_tot": -99.92511208970613,
+          "PGFT_e_stat": -99.85707403377191,
+          "PGFT_e_dyn": -0.06803805593422547,
+          "RHF": -99.65979988394078,
+          "R_CCSD_T": -99.96202352735602,
+          "Exact_FCI": -99.9487412601526,
+          "error_vs_ref_kcal_mol": 14.827528319411147,
+          "occ_alpha_top6": [
+            1.0,
+            0.999981,
+            0.999979,
+            0.999926,
+            0.500054,
+            0.5
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 3.2,
+          "PGFT_e_tot": -99.92065533610854,
+          "PGFT_e_stat": -99.85783015754757,
+          "PGFT_e_dyn": -0.06282517856096609,
+          "RHF": -99.61114720254261,
+          "R_CCSD_T": -99.97307838171616,
+          "Exact_FCI": -99.94606533661948,
+          "error_vs_ref_kcal_mol": 15.945016056566198,
+          "occ_alpha_top6": [
+            0.999999,
+            0.99999,
+            0.999939,
+            0.999879,
+            0.500158,
+            0.5
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 3.6,
+          "PGFT_e_tot": -99.92323495956089,
+          "PGFT_e_stat": -99.85817547335029,
+          "PGFT_e_dyn": -0.06505948621060315,
+          "RHF": -99.59162648858475,
+          "R_CCSD_T": -99.97824046900784,
+          "Exact_FCI": -99.94575077477127,
+          "error_vs_ref_kcal_mol": 14.128887360769408,
+          "occ_alpha_top6": [
+            0.999999,
+            0.999986,
+            0.999965,
+            0.999963,
+            0.500055,
+            0.499999
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        }
+      ],
+      "NPE_vs_FCI_kcal_mol": 16.068545757769893
+    },
+    "H2O_symmetric_631g": {
+      "points": [
+        {
+          "R_OH_angstrom": 0.8,
+          "PGFT_e_tot": -75.99946385073092,
+          "PGFT_e_stat": -75.91274953119493,
+          "PGFT_e_dyn": -0.08671431953598505,
+          "RHF": -75.91274933117668,
+          "R_CCSD_T": -76.03412215481514,
+          "Exact_FCI": -76.0344722361598,
+          "error_vs_ref_kcal_mol": 21.968093528275524,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 0.96,
+          "PGFT_e_tot": -76.0807345083348,
+          "PGFT_e_stat": -75.98393650390247,
+          "PGFT_e_dyn": -0.09679800443233656,
+          "RHF": -75.9839402987632,
+          "R_CCSD_T": -76.12053178053438,
+          "Exact_FCI": -76.12105899476683,
+          "error_vs_ref_kcal_mol": 25.303997272825956,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 1.2,
+          "PGFT_e_tot": -76.02592309043659,
+          "PGFT_e_stat": -75.91066114041705,
+          "PGFT_e_dyn": -0.11526195001955086,
+          "RHF": -75.91066234918421,
+          "R_CCSD_T": -76.073043273398,
+          "Exact_FCI": -76.07389712658286,
+          "error_vs_ref_kcal_mol": 30.10416219083111,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 1.5,
+          "PGFT_e_tot": -75.92001344410073,
+          "PGFT_e_stat": -75.76331473834627,
+          "PGFT_e_dyn": -0.15669870575447156,
+          "RHF": -75.76571105702602,
+          "R_CCSD_T": -75.9716247951693,
+          "Exact_FCI": -75.9726925573647,
+          "error_vs_ref_kcal_mol": 33.05664265837991,
+          "occ_alpha_top6": [
+            1.0,
+            0.999993,
+            1.0,
+            0.999983,
+            1.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 1.8,
+          "PGFT_e_tot": -75.82189277333464,
+          "PGFT_e_stat": -75.76295287844664,
+          "PGFT_e_dyn": -0.058939894887993054,
+          "RHF": -75.63331867728682,
+          "R_CCSD_T": -75.90058666173516,
+          "Exact_FCI": -75.8991476187905,
+          "error_vs_ref_kcal_mol": 48.47814744082939,
+          "occ_alpha_top6": [
+            0.999998,
+            0.999972,
+            0.999932,
+            0.735719,
+            0.502141,
+            0.460105
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 2.2,
+          "PGFT_e_tot": -75.81482497303247,
+          "PGFT_e_stat": -75.7607595870941,
+          "PGFT_e_dyn": -0.05406538593837737,
+          "RHF": -75.49245787130181,
+          "R_CCSD_T": -75.8772794433759,
+          "Exact_FCI": -75.8529525521854,
+          "error_vs_ref_kcal_mol": 23.92541714155284,
+          "occ_alpha_top6": [
+            0.999999,
+            0.99999,
+            0.999982,
+            0.642377,
+            0.573321,
+            0.421005
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 2.6,
+          "PGFT_e_tot": -75.82129540737043,
+          "PGFT_e_stat": -75.76983128260568,
+          "PGFT_e_dyn": -0.0514641247647426,
+          "RHF": -75.38949881281864,
+          "R_CCSD_T": -75.90408317023297,
+          "Exact_FCI": -75.8401630162604,
+          "error_vs_ref_kcal_mol": 11.839603331377644,
+          "occ_alpha_top6": [
+            0.999988,
+            0.9999,
+            0.999872,
+            0.500057,
+            0.500037,
+            0.500001
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_OH_angstrom": 3.0,
+          "PGFT_e_tot": -75.80789218004503,
+          "PGFT_e_stat": -75.76142401370345,
+          "PGFT_e_dyn": -0.04646816634158101,
+          "RHF": -75.41601542578356,
+          "R_CCSD_T": null,
+          "Exact_FCI": -75.83709505198017,
+          "error_vs_ref_kcal_mol": 18.32507880915221,
+          "occ_alpha_top6": [
+            0.999989,
+            0.999886,
+            0.999759,
+            0.500044,
+            0.500001,
+            0.50004
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        }
+      ],
+      "NPE_vs_FCI_kcal_mol": 36.63854410945174
+    },
+    "N2_sto3g": {
+      "points": [
+        {
+          "R_angstrom": 0.9,
+          "PGFT_e_tot": -107.25882405152397,
+          "PGFT_e_stat": -107.18648971022148,
+          "PGFT_e_dyn": -0.07233434130248753,
+          "RHF": -107.1871903010402,
+          "R_CCSD_T": -107.29241735352677,
+          "Exact_FCI": -107.29307576846938,
+          "error_vs_ref_kcal_mol": 21.49327688616959,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.098,
+          "PGFT_e_tot": -107.61985743387065,
+          "PGFT_e_stat": -107.50763032858866,
+          "PGFT_e_dyn": -0.11222710528198372,
+          "RHF": -107.4959750305905,
+          "R_CCSD_T": -107.65082402700752,
+          "Exact_FCI": -107.65299987556773,
+          "error_vs_ref_kcal_mol": 20.797196158501922,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.3,
+          "PGFT_e_tot": -107.60743070498344,
+          "PGFT_e_stat": -107.43628925866207,
+          "PGFT_e_dyn": -0.17114144632136916,
+          "RHF": -107.43387069004828,
+          "R_CCSD_T": -107.65331312863803,
+          "Exact_FCI": -107.65936966474582,
+          "error_vs_ref_kcal_mol": 32.59218932387646,
+          "occ_alpha_top6": [
+            0.999999,
+            0.999999,
+            0.999982,
+            0.999968,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.6,
+          "PGFT_e_tot": -107.46002104684003,
+          "PGFT_e_stat": -107.18763264871221,
+          "PGFT_e_dyn": -0.27238839812781174,
+          "RHF": -107.18484646080228,
+          "R_CCSD_T": -107.5323483054406,
+          "Exact_FCI": -107.54208576507773,
+          "error_vs_ref_kcal_mol": 51.4963881804775,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.999999,
+            0.999998,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.9,
+          "PGFT_e_tot": -107.4431899689141,
+          "PGFT_e_stat": -107.42617660018948,
+          "PGFT_e_dyn": -0.017013368724617083,
+          "RHF": -106.94123081630148,
+          "R_CCSD_T": -107.52977983860511,
+          "Exact_FCI": -107.46611285390517,
+          "error_vs_ref_kcal_mol": 14.384327504758666,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.999987,
+            0.999985,
+            0.721101,
+            0.522026
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.2,
+          "PGFT_e_tot": -107.44483691850807,
+          "PGFT_e_stat": -107.4292585869857,
+          "PGFT_e_dyn": -0.015578331522374193,
+          "RHF": -106.75183126618771,
+          "R_CCSD_T": null,
+          "Exact_FCI": -107.44485854684281,
+          "error_vs_ref_kcal_mol": 0.01357198495481201,
+          "occ_alpha_top6": [
+            0.999992,
+            0.999992,
+            0.999887,
+            0.999878,
+            0.636883,
+            0.505155
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.6,
+          "PGFT_e_tot": -107.4416128878359,
+          "PGFT_e_stat": -107.42635065483252,
+          "PGFT_e_dyn": -0.015262233003383299,
+          "RHF": -106.58195533133093,
+          "R_CCSD_T": null,
+          "Exact_FCI": -107.43978533232458,
+          "error_vs_ref_kcal_mol": -1.1468083977334833,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.999957,
+            0.999955,
+            0.527802,
+            0.506111
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 3.2,
+          "PGFT_e_tot": -107.45278162359277,
+          "PGFT_e_stat": -107.4373781583995,
+          "PGFT_e_dyn": -0.015403465193266545,
+          "RHF": -106.44620093017663,
+          "R_CCSD_T": null,
+          "Exact_FCI": -107.43824340743119,
+          "error_vs_ref_kcal_mol": -9.12286837737048,
+          "occ_alpha_top6": [
+            0.999994,
+            0.999994,
+            0.999847,
+            0.999846,
+            0.500081,
+            0.500084
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        }
+      ],
+      "NPE_vs_FCI_kcal_mol": 60.61925655784798
+    },
+    "N2_631g": {
+      "points": [
+        {
+          "R_angstrom": 0.9,
+          "PGFT_e_tot": -108.81282064944007,
+          "PGFT_e_stat": -108.6792081017976,
+          "PGFT_e_dyn": -0.1336125476424679,
+          "RHF": -108.67936104537861,
+          "R_CCSD_T": -108.86951995224977,
+          "CASSCF_10e8o_NEVPT2": -108.85211388567937,
+          "error_vs_ref_kcal_mol": 24.656878006761907,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.098,
+          "PGFT_e_tot": -109.03607513105685,
+          "PGFT_e_stat": -108.8675933734449,
+          "PGFT_e_dyn": -0.16848175761194809,
+          "RHF": -108.86774634695118,
+          "R_CCSD_T": -109.10316035908671,
+          "CASSCF_10e8o_NEVPT2": -109.08687136959581,
+          "error_vs_ref_kcal_mol": 31.875120929969476,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.3,
+          "PGFT_e_tot": -109.00226956808504,
+          "PGFT_e_stat": -108.77188842815373,
+          "PGFT_e_dyn": -0.23038113993130713,
+          "RHF": -108.77348170673265,
+          "R_CCSD_T": -109.06324647388018,
+          "CASSCF_10e8o_NEVPT2": -109.04842175181656,
+          "error_vs_ref_kcal_mol": 28.960932540230772,
+          "occ_alpha_top6": [
+            0.999998,
+            0.999998,
+            0.99997,
+            0.999939,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.6,
+          "PGFT_e_tot": -108.89068885036633,
+          "PGFT_e_stat": -108.54678097528388,
+          "PGFT_e_dyn": -0.34390787508244397,
+          "RHF": -108.55157114905415,
+          "R_CCSD_T": -108.93960464359728,
+          "CASSCF_10e8o_NEVPT2": -108.92425154904402,
+          "error_vs_ref_kcal_mol": 21.06091139537208,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.999998,
+            0.999995,
+            1.0,
+            1.0
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 1.9,
+          "PGFT_e_tot": -108.81391306526164,
+          "PGFT_e_stat": -108.74157559017874,
+          "PGFT_e_dyn": -0.07233747508290289,
+          "RHF": -108.36283944892973,
+          "R_CCSD_T": -108.9215448712456,
+          "CASSCF_10e8o_NEVPT2": -108.85023874061352,
+          "error_vs_ref_kcal_mol": 22.794705435042296,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.999999,
+            0.999999,
+            0.733308,
+            0.568096
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.2,
+          "PGFT_e_tot": -108.82142930769066,
+          "PGFT_e_stat": -108.75198350173267,
+          "PGFT_e_dyn": -0.0694458059580023,
+          "RHF": -108.2164627905903,
+          "R_CCSD_T": -109.10748840324116,
+          "CASSCF_10e8o_NEVPT2": -108.82531959487888,
+          "error_vs_ref_kcal_mol": 2.441192067429917,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.999944,
+            0.999936,
+            0.673747,
+            0.503444
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 2.6,
+          "PGFT_e_tot": -108.82125893968863,
+          "PGFT_e_stat": -108.75661649775226,
+          "PGFT_e_dyn": -0.06464244193637576,
+          "RHF": -108.07648439953539,
+          "R_CCSD_T": null,
+          "CASSCF_10e8o_NEVPT2": -108.8181805505254,
+          "error_vs_ref_kcal_mol": -1.9317183647833478,
+          "occ_alpha_top6": [
+            0.999997,
+            0.999997,
+            0.999926,
+            0.999923,
+            0.567454,
+            0.503617
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        },
+        {
+          "R_angstrom": 3.2,
+          "PGFT_e_tot": -108.82800800127428,
+          "PGFT_e_stat": -108.76127949464876,
+          "PGFT_e_dyn": -0.06672850662552188,
+          "RHF": -107.94766677117043,
+          "R_CCSD_T": null,
+          "CASSCF_10e8o_NEVPT2": -108.81641907775492,
+          "error_vs_ref_kcal_mol": -7.272159302596814,
+          "occ_alpha_top6": [
+            0.999998,
+            0.999998,
+            0.999823,
+            0.999819,
+            0.500448,
+            0.50141
+          ],
+          "max_abs_na_minus_nb": 0.0,
+          "max_abs_Pa_minus_Pb": 0.0
+        }
+      ],
+      "NPE_vs_NEVPT2_kcal_mol": 39.14728023256629,
+      "N2_8A_e_tot": -108.82634517949852,
+      "two_N_4S_pgft_ha": -108.82686982054416,
+      "two_N_4S_exact_fci_ha": -108.83987932482634,
+      "N2_8A_minus_2N_pgft_kcal_mol": 0.32921722662376035,
+      "N2_8A_minus_2N_fci_kcal_mol": 8.492804416556636
+    }
+  },
+  "gate_7_equilibrium_barriers_and_beh2": {
+    "reaction_thermochemistry": {
+      "6-31g": {
+        "reactions": {
+          "H2 + F2 -> 2 HF": {
+            "R_CCSD_T_kcal_mol": -98.72824806035801,
+            "PGFT_kcal_mol": -112.38361940226737,
+            "PGFT_error_kcal_mol": -13.655371341909358,
+            "RHF_error_kcal_mol": -22.9983051696763,
+            "R_MP2_error_kcal_mol": -6.529047057743426,
+            "R_B3LYP_error_kcal_mol": 2.1196831169215784,
+            "R_PBE0_error_kcal_mol": -3.9853511178810095,
+            "R_CCSD_error_kcal_mol": -2.6416557291208136
+          },
+          "N2 + 3 H2 -> 2 NH3": {
+            "R_CCSD_T_kcal_mol": -16.38968139844221,
+            "PGFT_kcal_mol": -23.896813677075063,
+            "PGFT_error_kcal_mol": -7.507132278632852,
+            "RHF_error_kcal_mol": -30.146976810861798,
+            "R_MP2_error_kcal_mol": 5.652042154353042,
+            "R_B3LYP_error_kcal_mol": -22.058613372603485,
+            "R_PBE0_error_kcal_mol": -33.70006510711619,
+            "R_CCSD_error_kcal_mol": -2.9608345070871493
+          },
+          "CO + H2O -> CO2 + H2": {
+            "R_CCSD_T_kcal_mol": -9.046603275779264,
+            "PGFT_kcal_mol": -4.838822488281639,
+            "PGFT_error_kcal_mol": 4.207780787497625,
+            "RHF_error_kcal_mol": 15.012651916291423,
+            "R_MP2_error_kcal_mol": -3.6442641321196305,
+            "R_B3LYP_error_kcal_mol": -9.97163952910857,
+            "R_PBE0_error_kcal_mol": -9.91914967260953,
+            "R_CCSD_error_kcal_mol": 3.5749914860668843
+          },
+          "CH4 + 2 H2O -> CO2 + 4 H2": {
+            "R_CCSD_T_kcal_mol": 42.32519652340587,
+            "PGFT_kcal_mol": 52.834959887931745,
+            "PGFT_error_kcal_mol": 10.509763364525874,
+            "RHF_error_kcal_mol": 37.05719846786048,
+            "R_MP2_error_kcal_mol": -3.9961356587852066,
+            "R_B3LYP_error_kcal_mol": 8.679796509316091,
+            "R_PBE0_error_kcal_mol": 20.995209379308136,
+            "R_CCSD_error_kcal_mol": 7.149877554158351
+          },
+          "Li2 + H2 -> 2 LiH": {
+            "R_CCSD_T_kcal_mol": 30.535344604539194,
+            "PGFT_kcal_mol": 18.168215439502642,
+            "PGFT_error_kcal_mol": -12.367129165036552,
+            "RHF_error_kcal_mol": -9.255529497327725,
+            "R_MP2_error_kcal_mol": -3.9012728326862245,
+            "R_B3LYP_error_kcal_mol": -13.165202553143331,
+            "R_PBE0_error_kcal_mol": -8.936296340100657,
+            "R_CCSD_error_kcal_mol": -0.015823050795869875
+          }
+        },
+        "MAE_vs_CCSD_T_kcal_mol": {
+          "PGFT": 9.649435387520452,
+          "RHF": 22.894132372403543,
+          "R_MP2": 4.744552367137506,
+          "R_B3LYP": 11.198987016218611,
+          "R_PBE0": 15.507214323403105,
+          "R_CCSD": 3.2686364654458138
+        }
+      },
+      "cc-pvdz": {
+        "reactions": {
+          "H2 + F2 -> 2 HF": {
+            "R_CCSD_T_kcal_mol": -122.75092923034438,
+            "PGFT_kcal_mol": -133.92992845228014,
+            "PGFT_error_kcal_mol": -11.178999221935754,
+            "RHF_error_kcal_mol": -18.093080173710177,
+            "R_MP2_error_kcal_mol": -7.529630087710473,
+            "R_B3LYP_error_kcal_mol": 7.1441786938316625,
+            "R_PBE0_error_kcal_mol": 1.1120625087470728,
+            "R_CCSD_error_kcal_mol": -3.2731766784636136
+          },
+          "N2 + 3 H2 -> 2 NH3": {
+            "R_CCSD_T_kcal_mol": -24.699270713837564,
+            "PGFT_kcal_mol": -29.623190626515502,
+            "PGFT_error_kcal_mol": -4.923919912677938,
+            "RHF_error_kcal_mol": -7.292445530486166,
+            "R_MP2_error_kcal_mol": 0.1598468584836219,
+            "R_B3LYP_error_kcal_mol": -9.352117601738207,
+            "R_PBE0_error_kcal_mol": -19.46437667107871,
+            "R_CCSD_error_kcal_mol": -2.695582689835522
+          },
+          "CO + H2O -> CO2 + H2": {
+            "R_CCSD_T_kcal_mol": -9.914987723209922,
+            "PGFT_kcal_mol": -6.488658875321962,
+            "PGFT_error_kcal_mol": 3.4263288478879605,
+            "RHF_error_kcal_mol": 7.55012315760276,
+            "R_MP2_error_kcal_mol": -4.727696135901446,
+            "R_B3LYP_error_kcal_mol": -8.85810340879851,
+            "R_PBE0_error_kcal_mol": -9.95378678036996,
+            "R_CCSD_error_kcal_mol": 2.6733265029692426
+          },
+          "CH4 + 2 H2O -> CO2 + 4 H2": {
+            "R_CCSD_T_kcal_mol": 43.216527380734114,
+            "PGFT_kcal_mol": 49.964682608087806,
+            "PGFT_error_kcal_mol": 6.748155227353692,
+            "RHF_error_kcal_mol": 10.922984904908141,
+            "R_MP2_error_kcal_mol": -2.542857694426786,
+            "R_B3LYP_error_kcal_mol": -2.269341203430322,
+            "R_PBE0_error_kcal_mol": 7.610279628943388,
+            "R_CCSD_error_kcal_mol": 5.129602498138631
+          },
+          "Li2 + H2 -> 2 LiH": {
+            "R_CCSD_T_kcal_mol": 22.181191758493753,
+            "PGFT_kcal_mol": 14.769668345795909,
+            "PGFT_error_kcal_mol": -7.411523412697845,
+            "RHF_error_kcal_mol": -2.738897578709313,
+            "R_MP2_error_kcal_mol": -2.2174977809524137,
+            "R_B3LYP_error_kcal_mol": -8.296913746443671,
+            "R_PBE0_error_kcal_mol": -3.4913896906566606,
+            "R_CCSD_error_kcal_mol": -0.023239809459443705
+          }
+        },
+        "MAE_vs_CCSD_T_kcal_mol": {
+          "PGFT": 6.737785324510638,
+          "RHF": 9.31950626908331,
+          "R_MP2": 3.4355057114949483,
+          "R_B3LYP": 7.1841309308484735,
+          "R_PBE0": 8.326379055959158,
+          "R_CCSD": 2.7589856357732905
+        }
+      }
+    },
+    "barriers_summary_kcal_mol": {
+      "H_plus_H2_ccpvdz": {
+        "PGFT": 18.297397262522438,
+        "ROHF": 23.64389775060265,
+        "UHF": 16.917634668325576,
+        "B3LYP": 3.0733972676978047,
+        "PBE0": 4.620628406893407,
+        "MP2": 13.215048805207719,
+        "CCSD": 10.407108435580724,
+        "CCSD_T": 10.215978096780153,
+        "Exact_FCI": 10.151697907673372
+      },
+      "NH3_planar_inversion_631g": {
+        "PGFT": -0.472967239980472,
+        "RHF": -2.2878114712072386,
+        "R_B3LYP": -1.6771653661289896,
+        "R_PBE0": -2.0328735823246458,
+        "R_MP2": -0.9737547040021257,
+        "R_CCSD": -0.3476971963021058,
+        "R_CCSD_T": -0.21720687786784323
+      },
+      "H2O_linear_inversion_631g": {
+        "PGFT": 28.672775644932408,
+        "RHF": 24.78605821410059,
+        "R_B3LYP": 24.31184855724292,
+        "R_PBE0": 24.086728845091702,
+        "R_MP2": 28.1432610097083,
+        "R_CCSD": 28.846438516087776,
+        "R_CCSD_T": 29.025293500102748,
+        "Exact_FCI": 29.058114093456098
+      },
+      "C2H6_internal_rotation_631g": {
+        "PGFT": 3.2852874270908363,
+        "RHF": 2.955273117983497,
+        "R_B3LYP": 2.8802428784915994,
+        "R_PBE0": 2.825126584203892,
+        "R_MP2": 3.345618325347741,
+        "R_CCSD": 3.2034561860255444,
+        "R_CCSD_T": 3.241452790273834
+      },
+      "BeH2_C2v_peak_vs_x4_631g": {
+        "PGFT": 61.102276497525395,
+        "RHF": 107.85579795657497,
+        "R_B3LYP": 69.49782348793698,
+        "R_PBE0": 69.01209579261051,
+        "R_MP2": 100.40688557664613,
+        "R_CCSD": 73.78661701666907,
+        "R_CCSD_T": 70.29600497565431,
+        "Exact_FCI": 70.98965739871001
+      }
+    },
+    "BeH2_C2v_trajectory_631g": {
+      "points": [
+        {
+          "x_bohr": 0.0,
+          "homo_lumo_gap_ha": 0.5343763869466285,
+          "PGFT_e_tot": -15.788401713661491,
+          "PGFT_e_stat": -15.759318299099975,
+          "PGFT_e_dyn": -0.029083414561515964,
+          "RHF": -15.759318461785018,
+          "R_MP2": -15.788593230968127,
+          "R_CCSD": -15.800072952465253,
+          "R_CCSD_T": -15.80035792772555,
+          "Exact_FCI": -15.800543819822149,
+          "PGFT_minus_FCI_kcal_mol": 7.619286650892776,
+          "RHF_minus_FCI_kcal_mol": 25.869302739943283,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 1.0,
+          "homo_lumo_gap_ha": 0.48828970661343196,
+          "PGFT_e_tot": -15.753506371291222,
+          "PGFT_e_stat": -15.72451485882247,
+          "PGFT_e_dyn": -0.028991512468751382,
+          "RHF": -15.724513960589306,
+          "R_MP2": -15.754275967102636,
+          "R_CCSD": -15.765569176656703,
+          "R_CCSD_T": -15.765874193749104,
+          "Exact_FCI": -15.766033681873754,
+          "PGFT_minus_FCI_kcal_mol": 7.861006075070098,
+          "RHF_minus_FCI_kcal_mol": 26.05401846645062,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 2.0,
+          "homo_lumo_gap_ha": 0.3287137819620356,
+          "PGFT_e_tot": -15.685865073087102,
+          "PGFT_e_stat": -15.654516656295344,
+          "PGFT_e_dyn": -0.03134841679175799,
+          "RHF": -15.652938299233886,
+          "R_MP2": -15.686896048865648,
+          "R_CCSD": -15.702969082217693,
+          "R_CCSD_T": -15.703386586573567,
+          "Exact_FCI": -15.703555672696824,
+          "PGFT_minus_FCI_kcal_mol": 11.101018856957445,
+          "RHF_minus_FCI_kcal_mol": 31.762881400183627,
+          "occ_alpha_top6": [
+            1.0,
+            0.999992,
+            0.915073,
+            0.084927,
+            1e-06,
+            1e-06
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 2.5,
+          "homo_lumo_gap_ha": 0.2503565889224486,
+          "PGFT_e_tot": -15.636530801882564,
+          "PGFT_e_stat": -15.609453795456812,
+          "PGFT_e_dyn": -0.027077006425752094,
+          "RHF": -15.589620801583237,
+          "R_MP2": -15.628548832798858,
+          "R_CCSD": -15.651119164798997,
+          "R_CCSD_T": -15.651906774880105,
+          "Exact_FCI": -15.652296484616429,
+          "PGFT_minus_FCI_kcal_mol": 9.893115280572783,
+          "RHF_minus_FCI_kcal_mol": 39.32958489670348,
+          "occ_alpha_top6": [
+            1.0,
+            0.999997,
+            0.548486,
+            0.312278,
+            0.139232,
+            1e-06
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 2.75,
+          "homo_lumo_gap_ha": 0.1523883082767874,
+          "PGFT_e_tot": -15.627928995167242,
+          "PGFT_e_stat": -15.600907666997195,
+          "PGFT_e_dyn": -0.027021328170046884,
+          "RHF": -15.494111144135038,
+          "R_MP2": -15.5491606926163,
+          "R_CCSD": -15.622086244612154,
+          "R_CCSD_T": -15.640140282165266,
+          "Exact_FCI": -15.62859296715086,
+          "PGFT_minus_FCI_kcal_mol": 0.41664871023297706,
+          "RHF_minus_FCI_kcal_mol": 84.38861803170524,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.503332,
+            0.356721,
+            0.139944,
+            1e-06
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 2.85,
+          "homo_lumo_gap_ha": 0.17434340426613404,
+          "PGFT_e_tot": -15.620700466448643,
+          "PGFT_e_stat": -15.59337161326413,
+          "PGFT_e_dyn": -0.02732885318451302,
+          "RHF": -15.512297902614293,
+          "R_MP2": -15.566072842058093,
+          "R_CCSD": -15.622431707387383,
+          "R_CCSD_T": -15.627878174510206,
+          "Exact_FCI": -15.626846182293551,
+          "PGFT_minus_FCI_kcal_mol": 3.8564949175799503,
+          "RHF_minus_FCI_kcal_mol": 71.88013073636439,
+          "occ_alpha_top6": [
+            1.0,
+            1.0,
+            0.465678,
+            0.394076,
+            0.140246,
+            0.0
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 3.0,
+          "homo_lumo_gap_ha": 0.20673851662227882,
+          "PGFT_e_tot": -15.611501983092195,
+          "PGFT_e_stat": -15.583458406307155,
+          "PGFT_e_dyn": -0.028043576785039406,
+          "RHF": -15.538460405193415,
+          "R_MP2": -15.590454091795362,
+          "R_CCSD": -15.635795751738438,
+          "R_CCSD_T": -15.637362023539591,
+          "Exact_FCI": -15.637679638234165,
+          "PGFT_minus_FCI_kcal_mol": 16.426726610342598,
+          "RHF_minus_FCI_kcal_mol": 62.261008742344615,
+          "occ_alpha_top6": [
+            1.0,
+            0.999998,
+            0.469567,
+            0.385121,
+            0.145307,
+            1e-06
+          ],
+          "max_abs_na_minus_nb": 0.0
+        },
+        {
+          "x_bohr": 4.0,
+          "homo_lumo_gap_ha": 0.3500522392034435,
+          "PGFT_e_tot": -15.70887465876176,
+          "PGFT_e_stat": -15.66400467340874,
+          "PGFT_e_dyn": -0.04486998535301869,
+          "RHF": -15.665990298816501,
+          "R_MP2": -15.70916924982025,
+          "R_CCSD": -15.739672703568548,
+          "R_CCSD_T": -15.739901989099794,
+          "Exact_FCI": -15.739975402381743,
+          "PGFT_minus_FCI_kcal_mol": 19.516011271947296,
+          "RHF_minus_FCI_kcal_mol": 46.42635342672907,
+          "occ_alpha_top6": [
+            0.999999,
+            0.999994,
+            0.999984,
+            0.0,
+            0.0,
+            6e-06
+          ],
+          "max_abs_na_minus_nb": 0.0
+        }
+      ],
+      "crossing_window_2p75_to_2p85_dE_kcal": {
+        "PGFT": 4.535970254458158,
+        "RHF": -11.412363248229648,
+        "R_CCSD_T": 7.6945887255316565,
+        "Exact_FCI": 1.0961240471111853
+      }
+    }
+  },
+  "total_audit_wall_time_s": 390.19
+}

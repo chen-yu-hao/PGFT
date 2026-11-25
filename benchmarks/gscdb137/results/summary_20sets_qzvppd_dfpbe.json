@@ -1,0 +1,870 @@
+{
+  "overall": {
+    "n_datasets": 20,
+    "n_reactions": 463,
+    "n_unique_mols": 802,
+    "methods": {
+      "PBE": {
+        "mean_MAE": 9.229790577270176,
+        "mean_RMSE": 11.586677733844095,
+        "mean_RelMetric": 3.7604825160781834,
+        "rxn_weighted_MAE": 8.117009809915437
+      }
+    },
+    "qchem_CF22D_mean_RelMetric": 1.1498573258560139
+  },
+  "by_category": {
+    "Barrier Height": {
+      "n_datasets": 2,
+      "n_reactions": 57,
+      "methods": {
+        "PBE": {
+          "mean_MAE": 7.378183446233873,
+          "mean_RMSE": 9.655175985882746,
+          "mean_RelMetric": 4.828491225889282
+        }
+      },
+      "qchem_CF22D_mean_RelMetric": 1.0636466521786903
+    },
+    "Isomerization": {
+      "n_datasets": 1,
+      "n_reactions": 20,
+      "methods": {
+        "PBE": {
+          "mean_MAE": 2.95120234459165,
+          "mean_RMSE": 4.308750772858546,
+          "mean_RelMetric": 2.2567576343155102
+        }
+      },
+      "qchem_CF22D_mean_RelMetric": 0.9889584562981589
+    },
+    "Noncovalent": {
+      "n_datasets": 4,
+      "n_reactions": 97,
+      "methods": {
+        "PBE": {
+          "mean_MAE": 1.6656367520329065,
+          "mean_RMSE": 3.5617300963121803,
+          "mean_RelMetric": 2.772698973295256
+        }
+      },
+      "qchem_CF22D_mean_RelMetric": 1.4674578543683583
+    },
+    "Thermochemistry": {
+      "n_datasets": 12,
+      "n_reactions": 279,
+      "methods": {
+        "PBE": {
+          "mean_MAE": 12.604723449225714,
+          "mean_RMSE": 15.124841779478132,
+          "mean_RelMetric": 4.18474070695643
+        }
+      },
+      "qchem_CF22D_mean_RelMetric": 1.0928802268335966
+    },
+    "Transition Metal": {
+      "n_datasets": 1,
+      "n_reactions": 10,
+      "methods": {
+        "PBE": {
+          "mean_MAE": 8.969013909503953,
+          "mean_RMSE": 12.369430193271572,
+          "mean_RelMetric": 1.9882258588114041
+        }
+      },
+      "qchem_CF22D_mean_RelMetric": 0.8965006169881448
+    }
+  },
+  "timing_global": {
+    "PBE": {
+      "n_mols": 802,
+      "total_cpu_s": 23829.797287187015,
+      "mean_s": 29.71296419848755,
+      "median_s": 8.347817466000379,
+      "p90_s": 85.8008537300002,
+      "max_s": 609.3255882869998
+    }
+  },
+  "per_dataset": {
+    "AE18": {
+      "dataset": "AE18",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 18,
+      "n_eval": 18,
+      "standard_metric": 4.951586087331369,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 7.525309406452266,
+        "PBE0_QChem": 41.68763753700046,
+        "B3LYP_QChem": 18.26303387142969
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.519777556873295,
+        "PBE0_QChem": 8.41904731166005,
+        "B3LYP_QChem": 3.688319974513956
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 51.817846104689266,
+          "RMSE": 62.78090070434579,
+          "MSE": 51.817846104689266,
+          "MaxAbs": 122.59072831080994,
+          "Metric": 51.817846104689266,
+          "RelMetric": 10.464898557911617
+        }
+      },
+      "n_unique_mols": 18,
+      "max_nao": 79,
+      "median_nao": 66,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 37.976576551001926,
+          "mean_s": 2.109809808388996,
+          "median_s": 1.8915818209998179,
+          "max_s": 7.3082084179995945
+        }
+      }
+    },
+    "ALKBDE10": {
+      "dataset": "ALKBDE10",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 10,
+      "n_eval": 10,
+      "standard_metric": 3.255146458172462,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 3.132143321462736,
+        "PBE0_QChem": 5.232546383940082,
+        "B3LYP_QChem": 4.207134319548478
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9622127181402511,
+        "PBE0_QChem": 1.60746880399286,
+        "B3LYP_QChem": 1.292456230037186
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 6.285979341951869,
+          "RMSE": 10.303717229257332,
+          "MSE": 5.942961259769136,
+          "MaxAbs": 27.591673614210876,
+          "Metric": 6.285979341951869,
+          "RelMetric": 1.9310895600934062
+        }
+      },
+      "n_unique_mols": 20,
+      "max_nao": 142,
+      "median_nao": 99,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 135.43113528399954,
+          "mean_s": 6.7715567641999765,
+          "median_s": 5.903793804000088,
+          "max_s": 35.202157697000075
+        }
+      }
+    },
+    "BDE99MR": {
+      "dataset": "BDE99MR",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 16,
+      "n_eval": 16,
+      "standard_metric": 3.314104787854086,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 3.44254317320531,
+        "PBE0_QChem": 3.331581884790042,
+        "B3LYP_QChem": 3.650224838273306
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.038755076732015,
+        "PBE0_QChem": 1.00527354988895,
+        "B3LYP_QChem": 1.101421069017211
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 12.072804728409201,
+          "RMSE": 13.610605591886712,
+          "MSE": -11.423898857588766,
+          "MaxAbs": 21.339976056378802,
+          "Metric": 12.072804728409201,
+          "RelMetric": 3.64285546210096
+        }
+      },
+      "n_unique_mols": 22,
+      "max_nao": 316,
+      "median_nao": 165,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 599.6287596730053,
+          "mean_s": 27.255852712409332,
+          "median_s": 21.680374919000315,
+          "max_s": 78.6453024579996
+        }
+      }
+    },
+    "BDE99nonMR": {
+      "dataset": "BDE99nonMR",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 83,
+      "n_eval": 83,
+      "standard_metric": 1.930809315364183,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 1.74639041567022,
+        "PBE0_QChem": 3.629445220770955,
+        "B3LYP_QChem": 3.186200791170884
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.904486218174694,
+        "PBE0_QChem": 1.879753319962816,
+        "B3LYP_QChem": 1.650189257850102
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 7.035747543581765,
+          "RMSE": 8.902005136238792,
+          "MSE": -5.0912973212701855,
+          "MaxAbs": 24.67679646968113,
+          "Metric": 7.035747543581765,
+          "RelMetric": 3.6439370203963954
+        }
+      },
+      "n_unique_mols": 86,
+      "max_nao": 387,
+      "median_nao": 192,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 2761.484125029002,
+          "mean_s": 32.11028052359305,
+          "median_s": 24.744134554000993,
+          "max_s": 153.26316205799958
+        }
+      }
+    },
+    "BH76RC": {
+      "dataset": "BH76RC",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 30,
+      "n_eval": 30,
+      "standard_metric": 1.006338025915779,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 1.002888151487474,
+        "PBE0_QChem": 2.079966783642182,
+        "B3LYP_QChem": 2.030385651577362
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9965718532546103,
+        "PBE0_QChem": 2.066866927491276,
+        "B3LYP_QChem": 2.017598062767914
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 4.108051703350254,
+          "RMSE": 5.969254991779659,
+          "MSE": 1.1520641399961813,
+          "MaxAbs": 21.838475961006168,
+          "Metric": 4.108051703350254,
+          "RelMetric": 4.082178748648477
+        }
+      },
+      "n_unique_mols": 41,
+      "max_nao": 420,
+      "median_nao": 145,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1485.8964008589983,
+          "mean_s": 36.241375630707275,
+          "median_s": 14.118555107999782,
+          "max_s": 358.63109549099954
+        }
+      }
+    },
+    "DBH22": {
+      "dataset": "DBH22",
+      "datatype_short": "BH",
+      "datatype": "Barrier Height",
+      "n_total": 22,
+      "n_eval": 22,
+      "standard_metric": 1.206541418769373,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 1.417453112692347,
+        "PBE0_QChem": 3.466897169589628,
+        "B3LYP_QChem": 3.948872741078632
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.174806840976994,
+        "PBE0_QChem": 2.873417452279204,
+        "B3LYP_QChem": 3.272886184965232
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 8.115931986817511,
+          "RMSE": 10.20277697623694,
+          "MSE": -8.115931986817511,
+          "MaxAbs": 28.993161863453878,
+          "Metric": 8.115931986817511,
+          "RelMetric": 6.72660868542371
+        }
+      },
+      "n_unique_mols": 41,
+      "max_nao": 327,
+      "median_nao": 159,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1705.0479659310013,
+          "mean_s": 41.58653575441466,
+          "median_s": 22.22042499700001,
+          "max_s": 163.26848549500028
+        }
+      }
+    },
+    "DIPCS9": {
+      "dataset": "DIPCS9",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 9,
+      "n_eval": 9,
+      "standard_metric": 3.382089355723721,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 5.820216469571948,
+        "PBE0_QChem": 3.283271190199924,
+        "B3LYP_QChem": 4.926084411408561
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.720893760456693,
+        "PBE0_QChem": 0.9707819175869612,
+        "B3LYP_QChem": 1.456521071234218
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 4.978046955831941,
+          "RMSE": 6.306058113835237,
+          "MSE": -2.6024994862445965,
+          "MaxAbs": 12.79676504616009,
+          "Metric": 4.978046955831941,
+          "RelMetric": 1.4718851077684512
+        }
+      },
+      "n_unique_mols": 18,
+      "max_nao": 384,
+      "median_nao": 192,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 648.5147299820001,
+          "mean_s": 36.02859611011112,
+          "median_s": 20.23370914899988,
+          "max_s": 117.95194544600054
+        }
+      }
+    },
+    "G21EA": {
+      "dataset": "G21EA",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 25,
+      "n_eval": 25,
+      "standard_metric": 1.368372659707526,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 1.301859066508602,
+        "PBE0_QChem": 2.624228124551082,
+        "B3LYP_QChem": 2.594802606415616
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9513921936929517,
+        "PBE0_QChem": 1.917772988179975,
+        "B3LYP_QChem": 1.896268964457551
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 2.1415688329242553,
+          "RMSE": 2.78490829750498,
+          "MSE": 0.758901861761617,
+          "MaxAbs": 7.338612990915159,
+          "Metric": 2.1415688329242553,
+          "RelMetric": 1.565047955125025
+        }
+      },
+      "n_unique_mols": 50,
+      "max_nao": 175,
+      "median_nao": 112,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 586.8314394309991,
+          "mean_s": 11.736628788619983,
+          "median_s": 10.49749366299966,
+          "max_s": 40.92818619599893
+        }
+      }
+    },
+    "G21IP": {
+      "dataset": "G21IP",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 36,
+      "n_eval": 36,
+      "standard_metric": 2.747846425789931,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 2.935166221998385,
+        "PBE0_QChem": 3.690175905248725,
+        "B3LYP_QChem": 3.747907929035378
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.068169674422254,
+        "PBE0_QChem": 1.342933822871087,
+        "B3LYP_QChem": 1.363943739307759
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 3.8149677347556072,
+          "RMSE": 4.800154261593291,
+          "MSE": -0.4592097006104482,
+          "MaxAbs": 10.0964670736642,
+          "Metric": 3.8149677347556072,
+          "RelMetric": 1.3883482348031544
+        }
+      },
+      "n_unique_mols": 71,
+      "max_nao": 258,
+      "median_nao": 112,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1059.3681604479998,
+          "mean_s": 14.920678316169012,
+          "median_s": 9.621641230000023,
+          "max_s": 155.44140017399968
+        }
+      }
+    },
+    "He3": {
+      "dataset": "He3",
+      "datatype_short": "NC",
+      "datatype": "Noncovalent",
+      "n_total": 49,
+      "n_eval": 49,
+      "standard_metric": 0.1762081127955191,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 0.4690213271439584,
+        "PBE0_QChem": 0.167838216087578,
+        "B3LYP_QChem": 0.2324098732672029
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 2.661746497950606,
+        "PBE0_QChem": 0.9524999355866552,
+        "B3LYP_QChem": 1.318951037951943
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 0.2669034129083188,
+          "RMSE": 0.7267098396158083,
+          "MSE": 0.2311412122262787,
+          "MaxAbs": 4.660654998364137,
+          "Metric": 0.2669034129083188,
+          "RelMetric": 1.5147055868990957
+        }
+      },
+      "n_unique_mols": 197,
+      "max_nao": 99,
+      "median_nao": 66,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 397.0421967110069,
+          "mean_s": 2.015442622898512,
+          "median_s": 1.578128867000487,
+          "max_s": 4.018147265999687
+        }
+      }
+    },
+    "ISOMERIZATION20": {
+      "dataset": "ISOMERIZATION20",
+      "datatype_short": "ISO",
+      "datatype": "Isomerization",
+      "n_total": 20,
+      "n_eval": 20,
+      "standard_metric": 1.307717895673263,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 1.293278671378507,
+        "PBE0_QChem": 1.710328618319595,
+        "B3LYP_QChem": 1.751655243935585
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9889584562981589,
+        "PBE0_QChem": 1.307872763673585,
+        "B3LYP_QChem": 1.339474859012896
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 2.95120234459165,
+          "RMSE": 4.308750772858546,
+          "MSE": 0.6058591082186042,
+          "MaxAbs": 12.015225744486422,
+          "Metric": 2.95120234459165,
+          "RelMetric": 2.2567576343155102
+        }
+      },
+      "n_unique_mols": 31,
+      "max_nao": 324,
+      "median_nao": 225,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1471.2409524959967,
+          "mean_s": 47.45938556438699,
+          "median_s": 40.53310416600016,
+          "max_s": 99.57687741500013
+        }
+      }
+    },
+    "NC11": {
+      "dataset": "NC11",
+      "datatype_short": "NC",
+      "datatype": "Noncovalent",
+      "n_total": 11,
+      "n_eval": 11,
+      "standard_metric": 0.05436912994051551,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 0.05752441528828486,
+        "PBE0_QChem": 0.0980135798887901,
+        "B3LYP_QChem": 0.2493742045622979
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.058034501402202,
+        "PBE0_QChem": 1.802743211010096,
+        "B3LYP_QChem": 4.586687424189694
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 0.12613365409699243,
+          "RMSE": 0.16425560181018214,
+          "MSE": -0.06088569588709865,
+          "MaxAbs": 0.35058536836828025,
+          "Metric": 0.12613365409699243,
+          "RelMetric": 2.3199498361477087
+        }
+      },
+      "n_unique_mols": 33,
+      "max_nao": 252,
+      "median_nao": 101,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 271.6560170849971,
+          "mean_s": 8.232000517727185,
+          "median_s": 5.313810494000791,
+          "max_s": 34.028139832000306
+        }
+      }
+    },
+    "O24": {
+      "dataset": "O24",
+      "datatype_short": "NC",
+      "datatype": "Noncovalent",
+      "n_total": 24,
+      "n_eval": 24,
+      "standard_metric": 1.12470266186366,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 0.4938875491282524,
+        "PBE0_QChem": 0.6685270962363895,
+        "B3LYP_QChem": 1.186915376275145
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9472081773577135,
+        "PBE0_QChem": 4.169128138477452,
+        "B3LYP_QChem": 8.61995276649814
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 2.132205413690327,
+          "RMSE": 7.140528560086166,
+          "MSE": -1.8527343204859121,
+          "MaxAbs": 32.99011681631079,
+          "Metric": 4.731893809117231,
+          "RelMetric": 4.207239806186967
+        }
+      },
+      "n_unique_mols": 72,
+      "max_nao": 483,
+      "median_nao": 132,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 2833.3726470830034,
+          "mean_s": 39.35239787615282,
+          "median_s": 11.916920755998945,
+          "max_s": 609.3255882869998
+        }
+      }
+    },
+    "ORBH35": {
+      "dataset": "ORBH35",
+      "datatype_short": "BH",
+      "datatype": "Barrier Height",
+      "n_total": 35,
+      "n_eval": 35,
+      "standard_metric": 2.266070964015759,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 2.158401918284353,
+        "PBE0_QChem": 2.976009349075721,
+        "B3LYP_QChem": 2.859778354534345
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9524864633803864,
+        "PBE0_QChem": 1.313290446916042,
+        "B3LYP_QChem": 1.261998586957958
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 6.640434905650234,
+          "RMSE": 9.107574995528552,
+          "MSE": -5.92830961885784,
+          "MaxAbs": 21.27093664041817,
+          "Metric": 6.640434905650234,
+          "RelMetric": 2.930373766354854
+        }
+      },
+      "n_unique_mols": 38,
+      "max_nao": 357,
+      "median_nao": 294,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 5545.453995070004,
+          "mean_s": 145.93299987026325,
+          "median_s": 120.41083058200093,
+          "max_s": 305.80797927300046
+        }
+      }
+    },
+    "SIE4x4": {
+      "dataset": "SIE4x4",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 16,
+      "n_eval": 16,
+      "standard_metric": 9.176941603098477,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 10.8683371769256,
+        "PBE0_QChem": 14.00634835124362,
+        "B3LYP_QChem": 17.46305549966796
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.184309288102699,
+        "PBE0_QChem": 1.526254492729316,
+        "B3LYP_QChem": 1.90292760430902
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 23.23354251270529,
+          "RMSE": 25.99175580376164,
+          "MSE": 23.23354251270529,
+          "MaxAbs": 46.56229863351983,
+          "Metric": 23.23354251270529,
+          "RelMetric": 2.5317304519907573
+        }
+      },
+      "n_unique_mols": 23,
+      "max_nao": 324,
+      "median_nao": 132,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1268.8488685830016,
+          "mean_s": 55.16734211230442,
+          "median_s": 8.331973979000395,
+          "max_s": 245.62638403599976
+        }
+      }
+    },
+    "SN13": {
+      "dataset": "SN13",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 13,
+      "n_eval": 13,
+      "standard_metric": 0.6311684500932003,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 0.5706338495909722,
+        "PBE0_QChem": 0.9345407270419923,
+        "B3LYP_QChem": 2.263780317968793
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.9040912129031649,
+        "PBE0_QChem": 1.480651840097513,
+        "B3LYP_QChem": 3.586649994362862
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 5.291857682422732,
+          "RMSE": 5.648949208507415,
+          "MSE": -5.092244227084283,
+          "MaxAbs": 8.639706610583954,
+          "Metric": 5.291857682422732,
+          "RelMetric": 8.384224023937382
+        }
+      },
+      "n_unique_mols": 21,
+      "max_nao": 453,
+      "median_nao": 228,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1127.8165732079997,
+          "mean_s": 53.705551105142845,
+          "median_s": 34.800251095999556,
+          "max_s": 222.8021727129999
+        }
+      }
+    },
+    "TA13": {
+      "dataset": "TA13",
+      "datatype_short": "NC",
+      "datatype": "Noncovalent",
+      "n_total": 13,
+      "n_eval": 13,
+      "standard_metric": 1.356982395772657,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 1.632235745607007,
+        "PBE0_QChem": 2.00510964654268,
+        "B3LYP_QChem": 2.050498058455148
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.202842240762912,
+        "PBE0_QChem": 1.477623919653713,
+        "B3LYP_QChem": 1.511071967361528
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 4.137304527435988,
+          "RMSE": 6.215426383736566,
+          "MSE": -4.137304527435988,
+          "MaxAbs": 15.691405201420247,
+          "Metric": 4.137304527435988,
+          "RelMetric": 3.048900663947253
+        }
+      },
+      "n_unique_mols": 27,
+      "max_nao": 294,
+      "median_nao": 162,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1114.5620049850013,
+          "mean_s": 41.28007425870375,
+          "median_s": 24.796738802999243,
+          "max_s": 142.5290524129996
+        }
+      }
+    },
+    "TAE_W4-17MR": {
+      "dataset": "TAE_W4-17MR",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 17,
+      "n_eval": 17,
+      "standard_metric": 3.076167135552818,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 3.079523267203066,
+        "PBE0_QChem": 2.751123167775084,
+        "B3LYP_QChem": 4.429401921851388
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 1.001091010826902,
+        "PBE0_QChem": 0.8943347505338586,
+        "B3LYP_QChem": 1.439909382900087
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 29.4589624322782,
+          "RMSE": 33.208124130021275,
+          "MSE": 29.08815655773751,
+          "MaxAbs": 58.24886885346967,
+          "Metric": 29.4589624322782,
+          "RelMetric": 9.576515557885683
+        }
+      },
+      "n_unique_mols": 24,
+      "max_nao": 409,
+      "median_nao": 198,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 941.9405302540054,
+          "mean_s": 39.24752209391689,
+          "median_s": 31.95392193400039,
+          "max_s": 163.24254700100028
+        }
+      }
+    },
+    "TMD10": {
+      "dataset": "TMD10",
+      "datatype_short": "TM",
+      "datatype": "Transition Metal",
+      "n_total": 10,
+      "n_eval": 10,
+      "standard_metric": 5.643614741210356,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 3.816525736133325,
+        "PBE0_QChem": 4.731174471772432,
+        "B3LYP_QChem": 4.881304576046806
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.8965006169881448,
+        "PBE0_QChem": 1.268341138217693,
+        "B3LYP_QChem": 1.09767228784044
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 8.969013909503953,
+          "RMSE": 12.369430193271572,
+          "MSE": 8.051772776325837,
+          "MaxAbs": 31.98188213456703,
+          "Metric": 11.22078076564366,
+          "RelMetric": 1.9882258588114041
+        }
+      },
+      "n_unique_mols": 24,
+      "max_nao": 198,
+      "median_nao": 100,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1061.1948269219993,
+          "mean_s": 44.21645112174997,
+          "median_s": 30.787681825000618,
+          "max_s": 191.1394511560011
+        }
+      }
+    },
+    "WCPT6": {
+      "dataset": "WCPT6",
+      "datatype_short": "TC",
+      "datatype": "Thermochemistry",
+      "n_total": 6,
+      "n_eval": 6,
+      "standard_metric": 0.6630951223130768,
+      "qchem_ref_mae": {
+        "CF22D_QChem": 0.5721265337231269,
+        "PBE0_QChem": 0.9424560921303285,
+        "B3LYP_QChem": 0.9574375043267865
+      },
+      "qchem_ref_rel": {
+        "CF22D_QChem": 0.8628121584236303,
+        "PBE0_QChem": 1.421298484058752,
+        "B3LYP_QChem": 1.443891641046845
+      },
+      "methods": {
+        "PBE": {
+          "MAE": 1.0173058178081886,
+          "RMSE": 1.19166788500545,
+          "MSE": 0.0074345056338752285,
+          "MaxAbs": 1.6496910971826786,
+          "Metric": 1.0173058178081886,
+          "RelMetric": 1.534177802815858
+        }
+      },
+      "n_unique_mols": 12,
+      "max_nao": 354,
+      "median_nao": 324,
+      "timing_s": {
+        "PBE": {
+          "sum_s": 1105.1804821849992,
+          "mean_s": 92.0983735154166,
+          "median_s": 100.13514017399939,
+          "max_s": 127.68262181499995
+        }
+      }
+    }
+  }
+}
